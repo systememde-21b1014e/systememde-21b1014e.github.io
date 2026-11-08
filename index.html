@@ -1,0 +1,1157 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>一耽官网-耽美小说_广播剧_漫画_同人_阅读推荐与资源导航</title>
+  <meta name="description" content="一耽官网提供耽美小说、广播剧、漫画及同人创作的阅读推荐与资源导航。适合喜欢纯爱、古风、现代都市题材的读者找文、追更、看榜单，快速发现优质作品。">
+  <meta name="keywords" content="耽美小说,广播剧,漫画,同人,纯爱阅读,古风都市">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%232c3e50'/%3E%3Cpath d='M8 20c0-5 3-9 8-11 5 2 8 6 8 11-4-2-8-2-8-2s-4 0-8 2z' fill='%23e8b4b8'/%3E%3Ccircle cx='16' cy='22' r='2' fill='%23fff'/%3E%3C/svg%3E">
+  <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+  <style>
+    :root {
+      --brand: #2c3e50;
+      --brand-light: #3e5c76;
+      --accent: #c9856e;
+      --accent-soft: #f5e8e3;
+      --bg: #faf8f6;
+      --card-bg: #ffffff;
+      --text: #1e2a36;
+      --text-secondary: #5d6b7a;
+      --border: #e5e0db;
+      --radius: 12px;
+      --shadow: 0 2px 12px rgba(0,0,0,0.04);
+      --announce-h: 38px;
+      --header-h: 62px;
+      --sticky-offset: calc(var(--announce-h) + var(--header-h));
+      --font: system-ui, -apple-system, 'Segoe UI', Roboto, 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: var(--sticky-offset); }
+    body {
+      font-family: var(--font);
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      font-size: 15px;
+    }
+    a { color: inherit; text-decoration: none; }
+    ul { list-style: none; }
+    img, svg { display: block; max-width: 100%; }
+
+    /* 吸顶公告条 */
+    .announce-bar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--brand);
+      color: #f0ede8;
+      height: var(--announce-h);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 13px;
+      letter-spacing: 0.5px;
+      padding: 0 16px;
+      text-align: center;
+    }
+    .announce-bar a { color: #f5c6b8; text-decoration: underline; margin-left: 6px; }
+
+    /* 吸顶页头 */
+    .site-header {
+      position: sticky;
+      top: var(--announce-h);
+      z-index: 99;
+      background: rgba(255,255,255,0.92);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--border);
+      height: var(--header-h);
+      display: flex;
+      align-items: center;
+    }
+    .header-inner {
+      max-width: 1360px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      align-items: center;
+      gap: 28px;
+    }
+    .logo-area {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-shrink: 0;
+    }
+    .logo-mark svg { width: 32px; height: 32px; }
+    .logo-text {
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--brand);
+      letter-spacing: 1px;
+      white-space: nowrap;
+    }
+    .header-nav {
+      display: flex;
+      gap: 6px;
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+    .header-nav::-webkit-scrollbar { display: none; }
+    .header-nav a {
+      padding: 6px 12px;
+      font-size: 14px;
+      color: var(--text-secondary);
+      border-radius: 20px;
+      transition: background 0.2s, color 0.2s;
+      white-space: nowrap;
+    }
+    .header-nav a:hover { background: var(--accent-soft); color: var(--brand); }
+    .header-search {
+      margin-left: auto;
+      display: flex;
+      align-items: center;
+      background: #f3f0ec;
+      border-radius: 20px;
+      padding: 2px 4px 2px 14px;
+      border: 1px solid transparent;
+      transition: border-color 0.2s;
+    }
+    .header-search:focus-within { border-color: var(--accent); }
+    .header-search input {
+      border: none;
+      background: transparent;
+      padding: 6px 0;
+      font-size: 13px;
+      width: 150px;
+      outline: none;
+      color: var(--text);
+    }
+    .header-search input::placeholder { color: #a0aab3; }
+    .header-search button {
+      background: var(--accent);
+      border: none;
+      border-radius: 16px;
+      padding: 4px 10px;
+      cursor: pointer;
+      color: #fff;
+      font-size: 12px;
+      display: flex;
+      align-items: center;
+    }
+
+    /* 首屏 */
+    .hero {
+      max-width: 1360px;
+      margin: 0 auto;
+      padding: 32px 24px 24px;
+      display: flex;
+      align-items: center;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+    .hero-text { flex: 1 1 380px; }
+    .hero-badge {
+      display: inline-block;
+      background: var(--accent-soft);
+      color: var(--brand);
+      font-size: 12px;
+      padding: 3px 12px;
+      border-radius: 20px;
+      margin-bottom: 12px;
+      font-weight: 500;
+    }
+    .hero h1 {
+      font-size: 36px;
+      font-weight: 800;
+      line-height: 1.25;
+      color: var(--brand);
+      margin-bottom: 12px;
+      letter-spacing: -0.5px;
+    }
+    .hero-desc {
+      font-size: 15px;
+      color: var(--text-secondary);
+      margin-bottom: 20px;
+      max-width: 520px;
+      line-height: 1.7;
+    }
+    .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; }
+    .btn-primary {
+      background: var(--brand);
+      color: #fff;
+      padding: 10px 24px;
+      border-radius: 24px;
+      font-size: 14px;
+      font-weight: 500;
+      transition: background 0.2s;
+    }
+    .btn-primary:hover { background: var(--brand-light); }
+    .btn-outline {
+      border: 1px solid var(--border);
+      color: var(--text);
+      padding: 10px 24px;
+      border-radius: 24px;
+      font-size: 14px;
+      background: #fff;
+      transition: border-color 0.2s;
+    }
+    .btn-outline:hover { border-color: var(--accent); }
+    .hero-visual {
+      flex: 1 1 300px;
+      display: flex;
+      justify-content: center;
+    }
+    .hero-visual svg { width: 100%; max-width: 380px; height: auto; }
+
+    /* 三栏布局 */
+    .three-col {
+      max-width: 1360px;
+      margin: 0 auto;
+      padding: 0 24px 40px;
+      display: grid;
+      grid-template-columns: 180px minmax(0, 1fr) 250px;
+      gap: 32px;
+      align-items: start;
+    }
+    .col-left { position: sticky; top: var(--sticky-offset); }
+    .col-left nav { background: var(--card-bg); border-radius: var(--radius); padding: 16px 0; box-shadow: var(--shadow); border: 1px solid var(--border); }
+    .col-left .nav-title {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--text-secondary);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      padding: 0 16px 8px;
+    }
+    .col-left nav ul li a {
+      display: block;
+      padding: 7px 16px;
+      font-size: 13.5px;
+      color: var(--text-secondary);
+      border-left: 3px solid transparent;
+      transition: all 0.15s;
+    }
+    .col-left nav ul li a:hover, .col-left nav ul li a.active {
+      background: var(--accent-soft);
+      color: var(--brand);
+      border-left-color: var(--accent);
+      font-weight: 500;
+    }
+    .sidebar-taglist {
+      margin-top: 16px;
+      background: var(--card-bg);
+      border-radius: var(--radius);
+      padding: 16px;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--border);
+    }
+    .sidebar-taglist h4 { font-size: 13px; color: var(--brand); margin-bottom: 10px; }
+    .sidebar-taglist .tags { display: flex; flex-wrap: wrap; gap: 6px; }
+    .tag-sm {
+      display: inline-block;
+      background: #f3f0ec;
+      color: var(--text-secondary);
+      font-size: 11.5px;
+      padding: 3px 9px;
+      border-radius: 12px;
+      transition: background 0.2s;
+    }
+    .tag-sm:hover { background: var(--accent-soft); color: var(--brand); }
+
+    .col-right { position: sticky; top: var(--sticky-offset); display: flex; flex-direction: column; gap: 18px; }
+    .right-card {
+      background: var(--card-bg);
+      border-radius: var(--radius);
+      padding: 16px 18px;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--border);
+    }
+    .right-card h4 { font-size: 14px; color: var(--brand); margin-bottom: 10px; padding-bottom: 8px; border-bottom: 1px solid var(--border); }
+    .right-card ul li {
+      font-size: 13px;
+      color: var(--text-secondary);
+      padding: 5px 0;
+      border-bottom: 1px dashed #f0ece8;
+    }
+    .right-card ul li:last-child { border-bottom: none; }
+    .right-card ul li a:hover { color: var(--accent); }
+    .toc-list li { font-size: 12.5px; padding: 4px 0; }
+    .toc-list li a { color: var(--text-secondary); display: flex; gap: 6px; align-items: baseline; }
+    .toc-list li a:hover { color: var(--brand); }
+    .toc-list .num { font-size: 10px; color: #b0a8a0; min-width: 16px; }
+
+    /* 中栏板块 */
+    .section-block {
+      background: var(--card-bg);
+      border-radius: var(--radius);
+      padding: 26px 28px;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--border);
+      margin-bottom: 24px;
+    }
+    .section-block:last-child { margin-bottom: 0; }
+    .sec-title {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--brand);
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .sec-title::before {
+      content: '';
+      display: inline-block;
+      width: 4px;
+      height: 18px;
+      background: var(--accent);
+      border-radius: 2px;
+    }
+    .sec-sub {
+      font-size: 13px;
+      color: var(--text-secondary);
+      margin-bottom: 18px;
+    }
+
+    /* 内容简介 */
+    .intro-text p { font-size: 14.5px; color: var(--text); margin-bottom: 12px; line-height: 1.8; }
+    .intro-text p:last-child { margin-bottom: 0; }
+    .intro-text .hl { color: var(--brand); font-weight: 600; }
+
+    /* 热门卡片网格 */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+      gap: 14px;
+    }
+    .content-card {
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 14px;
+      transition: box-shadow 0.2s, border-color 0.2s;
+      background: #fff;
+      display: flex;
+      flex-direction: column;
+    }
+    .content-card:hover { border-color: var(--accent); box-shadow: 0 4px 16px rgba(201,133,110,0.1); }
+    .content-card .card-type {
+      font-size: 10.5px;
+      color: var(--accent);
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      margin-bottom: 4px;
+      text-transform: uppercase;
+    }
+    .content-card h5 { font-size: 14px; font-weight: 600; color: var(--text); margin-bottom: 4px; line-height: 1.4; }
+    .content-card .card-desc { font-size: 12px; color: var(--text-secondary); line-height: 1.55; margin-bottom: 8px; flex: 1; }
+    .card-tags { display: flex; flex-wrap: wrap; gap: 4px; margin-bottom: 8px; }
+    .card-tags span { font-size: 10.5px; background: #f5f1ed; color: #7a6b5e; padding: 1px 7px; border-radius: 8px; }
+    .card-meta { display: flex; justify-content: space-between; font-size: 11px; color: #b0a8a0; }
+
+    /* 更新列表 */
+    .update-list li {
+      display: flex;
+      align-items: baseline;
+      gap: 10px;
+      padding: 9px 0;
+      border-bottom: 1px dashed #f0ece8;
+      font-size: 13.5px;
+    }
+    .update-list li:last-child { border-bottom: none; }
+    .update-list .update-name { font-weight: 500; color: var(--text); flex-shrink: 0; }
+    .update-list .update-summary { color: var(--text-secondary); font-size: 12.5px; flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .update-list .update-time { font-size: 11px; color: #b0a8a0; flex-shrink: 0; }
+
+    /* 分类入口 */
+    .cat-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+    }
+    .cat-item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #f8f5f2;
+      border-radius: 8px;
+      padding: 12px 8px;
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--brand);
+      text-align: center;
+      transition: background 0.2s, color 0.2s;
+      border: 1px solid transparent;
+    }
+    .cat-item:hover { background: var(--accent-soft); border-color: var(--accent); }
+
+    /* 深度解析 */
+    .deep-dive h3 {
+      font-size: 15.5px;
+      font-weight: 700;
+      color: var(--brand);
+      margin: 20px 0 8px;
+    }
+    .deep-dive h3:first-of-type { margin-top: 0; }
+    .deep-dive p { font-size: 14px; color: var(--text); margin-bottom: 10px; line-height: 1.8; }
+    .deep-dive ul { margin: 8px 0 14px 18px; }
+    .deep-dive ul li { font-size: 13.5px; color: var(--text-secondary); margin-bottom: 5px; line-height: 1.65; list-style: disc; }
+    .deep-dive .strong { color: var(--brand); font-weight: 600; }
+
+    /* 体验指南 */
+    .guide-steps { display: flex; flex-direction: column; gap: 10px; }
+    .guide-step {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      padding: 12px 14px;
+      background: #faf8f6;
+      border-radius: 8px;
+      border-left: 3px solid var(--accent);
+    }
+    .step-num {
+      width: 22px; height: 22px;
+      background: var(--brand);
+      color: #fff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 11px;
+      font-weight: 600;
+      flex-shrink: 0;
+    }
+    .step-text { font-size: 13.5px; color: var(--text); }
+    .step-text strong { color: var(--brand); }
+
+    /* FAQ */
+    .faq-item { border-bottom: 1px solid var(--border); }
+    .faq-item:last-child { border-bottom: none; }
+    .faq-item details summary {
+      padding: 12px 0;
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--text);
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .faq-item details summary::-webkit-details-marker { display: none; }
+    .faq-item details summary::after {
+      content: '+';
+      font-size: 18px;
+      color: var(--accent);
+      font-weight: 300;
+      transition: transform 0.2s;
+    }
+    .faq-item details[open] summary::after { content: '−'; }
+    .faq-item details .faq-answer { padding: 0 0 14px; font-size: 13.5px; color: var(--text-secondary); line-height: 1.7; }
+
+    /* 评论 */
+    .comment-list { display: flex; flex-direction: column; gap: 12px; }
+    .comment-item {
+      display: flex;
+      gap: 10px;
+      padding: 10px 12px;
+      background: #faf8f6;
+      border-radius: 8px;
+    }
+    .avatar {
+      width: 30px; height: 30px;
+      border-radius: 50%;
+      background: var(--accent-soft);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--brand);
+      flex-shrink: 0;
+    }
+    .comment-body { flex: 1; }
+    .comment-nick { font-size: 12px; font-weight: 600; color: var(--brand); margin-bottom: 2px; }
+    .comment-text { font-size: 13px; color: var(--text-secondary); line-height: 1.6; }
+
+    /* 资讯 */
+    .news-list li {
+      padding: 10px 0;
+      border-bottom: 1px dashed #f0ece8;
+    }
+    .news-list li:last-child { border-bottom: none; }
+    .news-head { display: flex; align-items: baseline; gap: 10px; margin-bottom: 2px; }
+    .news-title { font-size: 14px; font-weight: 500; color: var(--text); }
+    .news-title:hover { color: var(--accent); }
+    .news-date { font-size: 11px; color: #b0a8a0; flex-shrink: 0; }
+    .news-summary { font-size: 12.5px; color: var(--text-secondary); line-height: 1.6; }
+
+    /* 相关推荐标签组 */
+    .rec-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+    .rec-tag {
+      display: inline-block;
+      padding: 6px 14px;
+      background: #f3f0ec;
+      border-radius: 18px;
+      font-size: 13px;
+      color: var(--text-secondary);
+      transition: all 0.2s;
+      border: 1px solid transparent;
+    }
+    .rec-tag:hover { background: var(--accent-soft); color: var(--brand); border-color: var(--accent); }
+
+    /* 趋势观察 */
+    .trend-panel {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+    .trend-item {
+      background: #faf8f6;
+      border-radius: 8px;
+      padding: 14px;
+    }
+    .trend-item h5 { font-size: 13.5px; color: var(--brand); margin-bottom: 4px; }
+    .trend-item p { font-size: 12.5px; color: var(--text-secondary); line-height: 1.6; }
+
+    /* 页尾 */
+    .site-footer {
+      background: #1e2a36;
+      color: #c8c2bb;
+      padding: 40px 24px 24px;
+      margin-top: 20px;
+    }
+    .footer-inner {
+      max-width: 1360px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 32px;
+    }
+    .footer-brand .logo-text { color: #f0ede8; font-size: 18px; margin-bottom: 8px; }
+    .footer-brand p { font-size: 12.5px; color: #9a948d; line-height: 1.65; max-width: 260px; }
+    .footer-col h5 { font-size: 13px; color: #e8e2da; margin-bottom: 10px; font-weight: 600; }
+    .footer-col ul li { font-size: 12.5px; padding: 3px 0; }
+    .footer-col ul li a { color: #9a948d; }
+    .footer-col ul li a:hover { color: #e8b4b8; }
+    .footer-bottom {
+      max-width: 1360px;
+      margin: 24px auto 0;
+      padding-top: 16px;
+      border-top: 1px solid #2e3d4a;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
+      font-size: 11.5px;
+      color: #7a736c;
+    }
+
+    /* 空结果提示 */
+    .empty-tip {
+      display: none;
+      padding: 16px;
+      text-align: center;
+      color: var(--text-secondary);
+      font-size: 13.5px;
+      background: #faf8f6;
+      border-radius: 8px;
+    }
+    .empty-tip.show { display: block; }
+
+    /* 响应式 */
+    @media (max-width: 1100px) {
+      .three-col { grid-template-columns: 160px minmax(0,1fr); }
+      .col-right { display: none; }
+    }
+    @media (max-width: 900px) {
+      .three-col { grid-template-columns: 1fr; gap: 0; padding: 0 16px 32px; }
+      .col-left { position: static; margin-bottom: 20px; }
+      .col-left nav { display: flex; overflow-x: auto; padding: 8px 12px; gap: 4px; scrollbar-width: none; }
+      .col-left nav .nav-title { display: none; }
+      .col-left nav ul { display: flex; gap: 4px; }
+      .col-left nav ul li a { white-space: nowrap; padding: 5px 12px; border-left: none; border-radius: 16px; font-size: 12.5px; }
+      .sidebar-taglist { display: none; }
+      .col-right { display: flex; margin-top: 24px; position: static; }
+      .footer-inner { grid-template-columns: 1fr 1fr; }
+      .hero h1 { font-size: 28px; }
+      .cat-grid { grid-template-columns: repeat(2, 1fr); }
+      .trend-panel { grid-template-columns: 1fr; }
+      .section-block { padding: 20px 18px; }
+    }
+    @media (max-width: 600px) {
+      .header-inner { padding: 0 12px; gap: 12px; }
+      .logo-text { font-size: 17px; }
+      .header-search input { width: 90px; }
+      .header-nav a { padding: 4px 8px; font-size: 12px; }
+      .hero { padding: 24px 16px 16px; }
+      .hero h1 { font-size: 24px; }
+      .footer-inner { grid-template-columns: 1fr; }
+      .card-grid { grid-template-columns: 1fr 1fr; }
+      .cat-grid { grid-template-columns: 1fr 1fr; }
+      .section-block { padding: 16px 14px; }
+      .btn-primary, .btn-outline { padding: 8px 18px; font-size: 13px; }
+    }
+    @media (max-width: 400px) {
+      .card-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- 吸顶公告条 -->
+<div class="announce-bar">
+  📖 一耽官网春季书单已更新，古风纯爱、现代都市、悬疑推理全新上线
+  <a href="/#update">查看更新</a>
+</div>
+
+<!-- 吸顶页头 -->
+<header class="site-header">
+  <div class="header-inner">
+    <div class="logo-area">
+      <div class="logo-mark">
+        <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect width="32" height="32" rx="8" fill="#2c3e50"/>
+          <path d="M8 20c0-5 3-9 8-11 5 2 8 6 8 11-4-2-8-2-8-2s-4 0-8 2z" fill="#e8b4b8"/>
+          <circle cx="16" cy="22" r="2" fill="#fff"/>
+        </svg>
+      </div>
+      <span class="logo-text">一耽官网</span>
+    </div>
+    <nav class="header-nav" aria-label="主题导航">
+      <a href="/#update">最新更新</a>
+      <a href="/#hot">热门推荐</a>
+      <a href="/#category">分类入口</a>
+      <a href="/#deep">深度解析</a>
+      <a href="/#guide">体验指南</a>
+      <a href="/#faq">常见问题</a>
+    </nav>
+    <div class="header-search">
+      <input type="text" id="searchInput" placeholder="搜作品、标签、类型…" aria-label="站内搜索">
+      <button id="searchBtn" type="button" aria-label="搜索">搜索</button>
+    </div>
+  </div>
+</header>
+
+<!-- 首屏 -->
+<section class="hero">
+  <div class="hero-text">
+    <span class="hero-badge">耽美阅读 · 广播剧 · 同人</span>
+    <h1>一耽官网</h1>
+    <p class="hero-desc">整理耽美小说、广播剧、漫画与同人创作的阅读入口，按古风、现代都市、悬疑推理、校园等类型分类，提供更新动态、完结书单和口碑推荐，方便读者找文、追更、比较不同题材。</p>
+    <div class="hero-actions">
+      <a href="/#hot" class="btn-primary">浏览热门作品</a>
+      <a href="/#category" class="btn-outline">按分类查找</a>
+    </div>
+  </div>
+  <div class="hero-visual" aria-hidden="true">
+    <svg viewBox="0 0 380 280" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect x="20" y="30" width="340" height="220" rx="16" fill="#f5e8e3"/>
+      <rect x="48" y="55" width="140" height="18" rx="9" fill="#2c3e50" opacity="0.85"/>
+      <rect x="48" y="82" width="200" height="10" rx="5" fill="#c9b8a8" opacity="0.6"/>
+      <rect x="48" y="100" width="170" height="10" rx="5" fill="#c9b8a8" opacity="0.6"/>
+      <rect x="48" y="130" width="100" height="80" rx="8" fill="#fff" stroke="#e5e0db"/>
+      <rect x="58" y="142" width="80" height="8" rx="4" fill="#e8b4b8"/>
+      <rect x="58" y="156" width="60" height="6" rx="3" fill="#d8d2cb"/>
+      <rect x="58" y="168" width="70" height="6" rx="3" fill="#d8d2cb"/>
+      <rect x="158" y="130" width="100" height="80" rx="8" fill="#fff" stroke="#e5e0db"/>
+      <rect x="168" y="142" width="80" height="8" rx="4" fill="#e8b4b8"/>
+      <rect x="168" y="156" width="50" height="6" rx="3" fill="#d8d2cb"/>
+      <rect x="168" y="168" width="65" height="6" rx="3" fill="#d8d2cb"/>
+      <circle cx="300" cy="80" r="24" fill="#c9856e" opacity="0.25"/>
+      <circle cx="300" cy="80" r="14" fill="#c9856e" opacity="0.4"/>
+      <path d="M290 180l20-10 20 10-20 10z" fill="#c9856e" opacity="0.3"/>
+    </svg>
+  </div>
+</section>
+
+<!-- 三栏主内容区 -->
+<div class="three-col">
+
+  <!-- 左栏：频道导航 + 标签索引 -->
+  <aside class="col-left">
+    <nav aria-label="内容频道">
+      <div class="nav-title">内容频道</div>
+      <ul>
+        <li><a href="/#intro" class="active">平台简介</a></li>
+        <li><a href="/#hot">热门作品</a></li>
+        <li><a href="/#update">最新更新</a></li>
+        <li><a href="/#category">分类入口</a></li>
+        <li><a href="/#deep">深度解析</a></li>
+        <li><a href="/#guide">体验指南</a></li>
+        <li><a href="/#faq">常见问题</a></li>
+        <li><a href="/#comment">读者评论</a></li>
+        <li><a href="/#news">相关资讯</a></li>
+        <li><a href="/#rec">相关推荐</a></li>
+        <li><a href="/#trend">趋势观察</a></li>
+      </ul>
+    </nav>
+    <div class="sidebar-taglist">
+      <h4>热门标签</h4>
+      <div class="tags">
+        <a href="/#category" class="tag-sm">古风纯爱</a>
+        <a href="/#category" class="tag-sm">现代都市</a>
+        <a href="/#category" class="tag-sm">悬疑推理</a>
+        <a href="/#category" class="tag-sm">校园青春</a>
+        <a href="/#category" class="tag-sm">广播剧</a>
+        <a href="/#category" class="tag-sm">同人创作</a>
+        <a href="/#category" class="tag-sm">完结书单</a>
+        <a href="/#category" class="tag-sm">短篇</a>
+        <a href="/#category" class="tag-sm">长篇连载</a>
+        <a href="/#category" class="tag-sm">强强</a>
+        <a href="/#category" class="tag-sm">治愈系</a>
+        <a href="/#category" class="tag-sm">破镜重圆</a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- 中栏：主内容 -->
+  <main class="col-main">
+
+    <!-- 1. 内容简介 -->
+    <section class="section-block" id="intro">
+      <h2 class="sec-title">平台简介</h2>
+      <p class="sec-sub">一耽官网专注于耽美文学与衍生内容的聚合阅读推荐</p>
+      <div class="intro-text">
+        <p><span class="hl">一耽官网</span>是一个面向耽美读者的内容导航与推荐站点，围绕小说、广播剧、漫画和同人创作，提供分类浏览、更新追踪和口碑精选。无论你是刚接触耽美阅读的新读者，还是追更多年的老书友，都可以在这里按古风、现代都市、悬疑推理、校园等类型找到感兴趣的作品。</p>
+        <p>站内内容按题材和形式双重维度组织。小说部分覆盖古风权谋、都市情感、校园暗恋、无限流等方向；广播剧侧重已完结或高口碑剧目；漫画和同人区则提供短篇合集与连载追踪。每个作品条目附带类型标签、更新状态和简要看点，帮助读者在打开正文之前快速判断是否对味。</p>
+        <p>对于习惯追更的读者，最新更新板块按时间倒序展示近期有变动的作品，标注章节进度与最后更新时间；对于喜欢一次性读完的读者，完结书单和热门推荐区提供完整作品索引。分类入口按照搜索习惯设置古风纯爱、现代都市、悬疑推理、校园青春等关键词，点击即可定位到对应内容集合。</p>
+        <p>一耽官网的推荐逻辑侧重题材区分和阅读场景匹配。睡前短篇、通勤中篇、周末长篇分别对应不同的篇幅标签，读者可以结合自己的时间选择合适体量。平台不设强制登录，所有导航和筛选均可直接使用，搜索框支持按作品名、标签和类型词进行本地查找。</p>
+      </div>
+    </section>
+
+    <!-- 2. 热门内容推荐 -->
+    <section class="section-block" id="hot">
+      <h2 class="sec-title">热门作品推荐</h2>
+      <p class="sec-sub">按阅读热度和口碑综合排序，涵盖古风、都市、悬疑、校园等类型</p>
+      <div class="card-grid" id="hotGrid">
+        <div class="content-card">
+          <span class="card-type">古风纯爱</span>
+          <h5>《春山渡》</h5>
+          <p class="card-desc">权谋背景下的双向暗恋，文笔细腻，适合喜欢慢热古风的读者。</p>
+          <div class="card-tags"><span>古风</span><span>权谋</span><span>慢热</span></div>
+          <div class="card-meta"><span>热度 9.2</span><span>连载中</span></div>
+        </div>
+        <div class="content-card">
+          <span class="card-type">现代都市</span>
+          <h5>《深夜便利店》</h5>
+          <p class="card-desc">都市夜班店员与常客的日常治愈故事，短篇合集，适合睡前看。</p>
+          <div class="card-tags"><span>都市</span><span>治愈</span><span>短篇</span></div>
+          <div class="card-meta"><span>热度 8.8</span><span>已完结</span></div>
+        </div>
+        <div class="content-card">
+          <span class="card-type">悬疑推理</span>
+          <h5>《雾港疑云》</h5>
+          <p class="card-desc">刑侦队长与法医搭档破案，感情线在案件中逐步推进，强强设定。</p>
+          <div class="card-tags"><span>悬疑</span><span>刑侦</span><span>强强</span></div>
+          <div class="card-meta"><span>热度 9.0</span><span>连载中</span></div>
+        </div>
+        <div class="content-card">
+          <span class="card-type">校园青春</span>
+          <h5>《夏日教室》</h5>
+          <p class="card-desc">同桌之间的青涩好感，从高中到大学的成长线，甜而不腻。</p>
+          <div class="card-tags"><span>校园</span><span>暗恋</span><span>成长</span></div>
+          <div class="card-meta"><span>热度 8.5</span><span>已完结</span></div>
+        </div>
+        <div class="content-card">
+          <span class="card-type">广播剧</span>
+          <h5>《归途列车》广播剧</h5>
+          <p class="card-desc">破镜重圆题材，全一季12集已完结，配音和后期制作口碑稳定。</p>
+          <div class="card-tags"><span>广播剧</span><span>破镜重圆</span><span>完结</span></div>
+          <div class="card-meta"><span>评分 9.4</span><span>全12集</span></div>
+        </div>
+        <div class="content-card">
+          <span class="card-type">古风纯爱</span>
+          <h5>《折枝记》</h5>
+          <p class="card-desc">仙侠背景下的师徒年下，剧情线与感情线并重，适合长篇阅读。</p>
+          <div class="card-tags"><span>仙侠</span><span>年下</span><span>长篇</span></div>
+          <div class="card-meta"><span>热度 8.9</span><span>连载中</span></div>
+        </div>
+        <div class="content-card">
+          <span class="card-type">同人创作</span>
+          <h5>《星轨之外》同人集</h5>
+          <p class="card-desc">科幻背景短篇同人合集，六位作者合写，适合碎片时间翻看。</p>
+          <div class="card-tags"><span>同人</span><span>科幻</span><span>短篇</span></div>
+          <div class="card-meta"><span>热度 8.2</span><span>合集</span></div>
+        </div>
+        <div class="content-card">
+          <span class="card-type">现代都市</span>
+          <h5>《合租室友》</h5>
+          <p class="card-desc">都市合租日常，从互不顺眼到互相依赖，轻松向中篇。</p>
+          <div class="card-tags"><span>都市</span><span>日常</span><span>轻松</span></div>
+          <div class="card-meta"><span>热度 8.6</span><span>已完结</span></div>
+        </div>
+        <div class="content-card">
+          <span class="card-type">悬疑推理</span>
+          <h5>《第七封信》</h5>
+          <p class="card-desc">连环案件与旧日书信交织，推理线扎实，适合喜欢烧脑的读者。</p>
+          <div class="card-tags"><span>悬疑</span><span>推理</span><span>烧脑</span></div>
+          <div class="card-meta"><span>热度 8.7</span><span>连载中</span></div>
+        </div>
+      </div>
+      <div class="empty-tip" id="hotEmpty">没有找到匹配的作品，试试其他关键词。</div>
+    </section>
+
+    <!-- 3. 最新更新 -->
+    <section class="section-block" id="update">
+      <h2 class="sec-title">最新更新动态</h2>
+      <p class="sec-sub">近期有章节或内容变动的作品，按时间倒序排列</p>
+      <ul class="update-list">
+        <li><span class="update-name">《春山渡》</span><span class="update-summary">第47章 · 雨夜对谈，两人关系出现关键转折</span><span class="update-time">今日</span></li>
+        <li><span class="update-name">《雾港疑云》</span><span class="update-summary">第33章 · 新案件线索指向三年前的旧案</span><span class="update-time">今日</span></li>
+        <li><span class="update-name">《折枝记》</span><span class="update-summary">第102章 · 秘境试炼结束，师徒重逢</span><span class="update-time">昨日</span></li>
+        <li><span class="update-name">《第七封信》</span><span class="update-summary">第21章 · 第四封信的内容浮出水面</span><span class="update-time">昨日</span></li>
+        <li><span class="update-name">《归途列车》广播剧</span><span class="update-summary">番外篇 · 婚后日常小剧场上线</span><span class="update-time">2天前</span></li>
+        <li><span class="update-name">《深夜便利店》</span><span class="update-summary">新增番外 · 便利店跨年夜特别篇</span><span class="update-time">3天前</span></li>
+        <li><span class="update-name">《星轨之外》同人集</span><span class="update-summary">新增三篇 · 太空站主题短篇</span><span class="update-time">4天前</span></li>
+        <li><span class="update-name">《合租室友》</span><span class="update-summary">完结 · 全本65章已发布</span><span class="update-time">5天前</span></li>
+        <li><span class="update-name">《夏日教室》</span><span class="update-summary">修订版 · 新增大学篇番外两章</span><span class="update-time">6天前</span></li>
+        <li><span class="update-name">《春山渡》</span><span class="update-summary">角色设定集 · 配角人物小传更新</span><span class="update-time">7天前</span></li>
+      </ul>
+    </section>
+
+    <!-- 4. 分类入口 -->
+    <section class="section-block" id="category">
+      <h2 class="sec-title">分类入口</h2>
+      <p class="sec-sub">按题材和内容形式快速定位，点击进入对应分类集合</p>
+      <div class="cat-grid">
+        <a href="/#hot" class="cat-item">古风纯爱</a>
+        <a href="/#hot" class="cat-item">现代都市</a>
+        <a href="/#hot" class="cat-item">悬疑推理</a>
+        <a href="/#hot" class="cat-item">校园青春</a>
+        <a href="/#hot" class="cat-item">广播剧</a>
+        <a href="/#hot" class="cat-item">漫画</a>
+        <a href="/#hot" class="cat-item">同人创作</a>
+        <a href="/#hot" class="cat-item">完结书单</a>
+      </div>
+    </section>
+
+    <!-- 5. 深度解析 -->
+    <section class="section-block deep-dive" id="deep">
+      <h2 class="sec-title">深度解析：耽美阅读的类型划分与选择思路</h2>
+      <p class="sec-sub">从题材差异、篇幅场景和阅读偏好三个角度理解内容组织</p>
+
+      <h3>题材类型的核心区分</h3>
+      <p>耽美作品按故事背景大致分为古风、现代都市、悬疑推理、校园青春和幻想架空五大方向。古风纯爱侧重权谋、仙侠或江湖背景，感情推进通常与主线事件绑定，适合喜欢世界观铺陈的读者。现代都市则贴近日常生活，涵盖职场、合租、治愈系等细分场景，节奏相对轻快。</p>
+      <p>悬疑推理类将感情线嵌入案件推进中，阅读时既有解谜的紧张感，也有角色关系的逐步升温。校园青春聚焦学生时代的青涩互动，篇幅通常不会过长。幻想架空包含科幻、无限流、异能等设定，适合追求新鲜世界观的读者。在一耽官网的分类入口中，这些类型都有独立标签，方便直接筛选。</p>
+
+      <h3>篇幅与阅读场景的匹配</h3>
+      <p>不同阅读场景对篇幅的需求差异明显。睡前阅读适合短篇或单章完结的故事，通常30分钟以内可以读完一篇；通勤途中适合中篇，单程能推进若干章节；周末或假期则适合长篇连载或已完结的大部头，可以连续追读。</p>
+      <ul>
+        <li><strong>短篇：</strong>1—5万字，适合碎片时间，常见于同人合集和番外。</li>
+        <li><strong>中篇：</strong>5—20万字，适合通勤或睡前分段阅读，都市日常类居多。</li>
+        <li><strong>长篇：</strong>20万字以上，适合周末集中阅读，古风仙侠和悬疑刑侦占比更高。</li>
+        <li><strong>连载中：</strong>需要追更，适合习惯每天或每周固定阅读的读者。</li>
+      </ul>
+
+      <h3>比较与选择：如何判断一部作品是否适合自己</h3>
+      <p>面对同类型的多部作品，可以从三个维度快速比较。第一看类型标签组合，例如“古风+权谋+慢热”与“古风+仙侠+年下”指向完全不同的阅读体验。第二看更新状态，连载中意味着需要等待，已完结则可以一次性读完。第三看读者评价中的高频词，治愈、烧脑、甜宠、虐心等描述能帮助判断情绪走向。</p>
+      <p>广播剧和漫画作为衍生形式，选择逻辑略有不同。广播剧优先看季数是否完整、配音阵容和后期评价；漫画则关注画风与原著还原度。一耽官网在热门推荐和最新更新中分别标注了这些信息，读者可以结合自己的偏好做取舍。对于拿不准的作品，先读简介和标签，再翻几页正文或试听片段，通常就能判断是否继续。</p>
+
+      <h3>更新节奏与追更习惯</h3>
+      <p>连载作品的更新频率因作者和平台而异，常见的有日更、隔日更和周更。追更读者可以关注最新更新板块的时间标注，按自己的节奏安排阅读。部分作品在连载期间会穿插番外或角色设定，这些内容通常不影响主线，但能补充人物背景。完结作品则不存在等待问题，适合不想被更新节奏打断的读者。</p>
+      <p>一耽官网的更新列表按时间倒序排列，每一条标注作品名、更新内容和相对时间，方便快速扫读。对于同时追多部作品的读者，建议优先选择更新稳定的作品，避免因长时间断更影响阅读体验。</p>
+    </section>
+
+    <!-- 6. 体验指南 -->
+    <section class="section-block" id="guide">
+      <h2 class="sec-title">体验指南</h2>
+      <p class="sec-sub">从浏览到定位作品的几个常用路径</p>
+      <div class="guide-steps">
+        <div class="guide-step">
+          <span class="step-num">1</span>
+          <span class="step-text"><strong>按分类浏览：</strong>在分类入口选择古风纯爱、现代都市、悬疑推理等类型，进入对应内容集合，每个分类下按热度和更新状态排列。</span>
+        </div>
+        <div class="guide-step">
+          <span class="step-num">2</span>
+          <span class="step-text"><strong>使用搜索定位：</strong>顶部搜索框支持作品名、标签和类型词查找。输入“古风”或“广播剧”会筛选出相关卡片，无结果时会显示提示。</span>
+        </div>
+        <div class="guide-step">
+          <span class="step-num">3</span>
+          <span class="step-text"><strong>关注更新动态：</strong>最新更新板块按时间展示近期有变动的作品，适合追更读者快速了解哪些作品有新章节或番外。</span>
+        </div>
+        <div class="guide-step">
+          <span class="step-num">4</span>
+          <span class="step-text"><strong>参考评论与资讯：</strong>读者评论提供不同视角的阅读反馈，相关资讯汇总近期内容趋势，帮助判断是否值得投入时间。</span>
+        </div>
+        <div class="guide-step">
+          <span class="step-num">5</span>
+          <span class="step-text"><strong>移动端适配：</strong>手机访问时频道导航转为横向滑动，卡片自动调整为单列或双列，正文阅读宽度保持舒适，不需要放大或横向拖动。</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. FAQ -->
+    <section class="section-block" id="faq">
+      <h2 class="sec-title">常见问题</h2>
+      <p class="sec-sub">围绕耽美阅读的类型选择和更新节奏</p>
+      <div class="faq-item">
+        <details>
+          <summary>古风纯爱类作品适合什么人看？</summary>
+          <div class="faq-answer">古风纯爱通常带有权谋、仙侠或江湖背景，感情线与主线事件结合较紧，适合喜欢世界观铺陈和慢节奏推进的读者。如果偏好快节奏日常互动，现代都市类可能更合适。</div>
+        </details>
+      </div>
+      <div class="faq-item">
+        <details>
+          <summary>悬疑推理耽美和普通刑侦文有什么区别？</summary>
+          <div class="faq-answer">悬疑推理耽美在案件推进之外，会着重描写两位主角之间的情感变化和信任建立过程，推理线通常保持完整，但感情线是重要的阅读驱动。普通刑侦文则更侧重案件本身和破案逻辑。</div>
+        </details>
+      </div>
+      <div class="faq-item">
+        <details>
+          <summary>连载中的作品一般多久更新一次？</summary>
+          <div class="faq-answer">更新频率因作品而异，常见的有日更、隔日更和周更。可以在最新更新板块查看每部作品最近一次变动的时间，结合自己的追更习惯判断是否适合跟进。</div>
+        </details>
+      </div>
+      <div class="faq-item">
+        <details>
+          <summary>广播剧和原著小说应该先看哪个？</summary>
+          <div class="faq-answer">如果更在意剧情细节和人物心理，建议先读原著；如果偏好声音演绎和氛围感，可以先听广播剧。两者并不冲突，很多读者会先听剧再补文，或者读完文后去听已完结的剧目。</div>
+        </details>
+      </div>
+      <div class="faq-item">
+        <details>
+          <summary>短篇和长篇怎么选？</summary>
+          <div class="faq-answer">时间碎片化时优先选短篇或中篇，通勤和睡前都能读完一个完整段落。周末或假期有连续空闲时间，可以选择长篇连载或已完结作品，获得更完整的世界观体验。</div>
+        </details>
+      </div>
+      <div class="faq-item">
+        <details>
+          <summary>完结书单和热门推荐有什么区别？</summary>
+          <div class="faq-answer">热门推荐按热度和口碑综合排序，包含连载中和已完结作品；完结书单只收录已全部发布的内容，适合不想等待更新的读者。两者可以配合使用，先看热度再筛完结状态。</div>
+        </details>
+      </div>
+    </section>
+
+    <!-- 8. 用户评论 -->
+    <section class="section-block" id="comment">
+      <h2 class="sec-title">读者评论</h2>
+      <p class="sec-sub">来自不同阅读偏好的真实使用反馈（示例）</p>
+      <div class="comment-list">
+        <div class="comment-item"><div class="avatar">林</div><div class="comment-body"><div class="comment-nick">林间有风</div><div class="comment-text">古风分类做得比较清楚，权谋和仙侠分开标注，找文省了不少时间。</div></div></div>
+        <div class="comment-item"><div class="avatar">陈</div><div class="comment-body"><div class="comment-nick">陈小满</div><div class="comment-text">睡前短篇那个标签很实用，直接筛出几千字的，不用翻半天。</div></div></div>
+        <div class="comment-item"><div class="avatar">苏</div><div class="comment-body"><div class="comment-nick">苏打气泡</div><div class="comment-text">悬疑推理类的推荐质量不错，几部刑侦文都挺对胃口。</div></div></div>
+        <div class="comment-item"><div class="avatar">周</div><div class="comment-body"><div class="comment-nick">周末不加班</div><div class="comment-text">连载更新列表如果能再加个筛选就更好了，现在按时间排也还行。</div></div></div>
+        <div class="comment-item"><div class="avatar">许</div><div class="comment-body"><div class="comment-nick">许愿树</div><div class="comment-text">广播剧的评分和集数标注挺清楚，选剧的时候有参考。</div></div></div>
+        <div class="comment-item"><div class="avatar">吴</div><div class="comment-body"><div class="comment-nick">吴聊日常</div><div class="comment-text">同人合集更新频率一般，但收录的短篇质量比较稳。</div></div></div>
+        <div class="comment-item"><div class="avatar">郑</div><div class="comment-body"><div class="comment-nick">郑在看书</div><div class="comment-text">希望完结书单能再细分一下篇幅，有时候只想找十万字左右的。</div></div></div>
+        <div class="comment-item"><div class="avatar">王</div><div class="comment-body"><div class="comment-nick">王不留行</div><div class="comment-text">搜索功能反应很快，输入类型词就能筛出对应的卡片。</div></div></div>
+        <div class="comment-item"><div class="avatar">李</div><div class="comment-body"><div class="comment-nick">李子树下</div><div class="comment-text">现代都市治愈系偏多，想看虐一点的都市文不太容易找。</div></div></div>
+        <div class="comment-item"><div class="avatar">赵</div><div class="comment-body"><div class="comment-nick">赵小北</div><div class="comment-text">页面排版看着舒服，手机上滑动也流畅，没有乱七八糟的弹窗。</div></div></div>
+        <div class="comment-item"><div class="avatar">孙</div><div class="comment-body"><div class="comment-nick">孙空空</div><div class="comment-text">FAQ里关于广播剧和原著先看哪个的回答挺中肯的。</div></div></div>
+        <div class="comment-item"><div class="avatar">钱</div><div class="comment-body"><div class="comment-nick">钱多多</div><div class="comment-text">分类入口的图标可以再明显一点，现在纯文字有点单调。</div></div></div>
+        <div class="comment-item"><div class="avatar">刘</div><div class="comment-body"><div class="comment-nick">刘看山</div><div class="comment-text">悬疑类推荐里几部冷门作品不错，比单纯看热度榜有发现感。</div></div></div>
+        <div class="comment-item"><div class="avatar">何</div><div class="comment-body"><div class="comment-nick">何处惹尘埃</div><div class="comment-text">古风长篇的更新追踪做得可以，至少不用自己一个个翻。</div></div></div>
+        <div class="comment-item"><div class="avatar">高</div><div class="comment-body"><div class="comment-nick">高乐高</div><div class="comment-text">整体偏推荐向，如果能有更多读者评分分布会更有参考价值。</div></div></div>
+        <div class="comment-item"><div class="avatar">黄</div><div class="comment-body"><div class="comment-nick">黄小圆</div><div class="comment-text">校园类作品数量不算多，但选出来的几本都挺甜的。</div></div></div>
+      </div>
+    </section>
+
+    <!-- 9. 相关资讯 -->
+    <section class="section-block" id="news">
+      <h2 class="sec-title">相关资讯</h2>
+      <p class="sec-sub">近期耽美内容领域的动态与观察（示例）</p>
+      <ul class="news-list">
+        <li>
+          <div class="news-head"><a href="/#news" class="news-title">古风权谋题材新作增多，读者偏好长篇连载</a><span class="news-date">2025-03-18</span></div>
+          <p class="news-summary">近几个月上线的古风作品中，权谋背景占比明显上升，篇幅集中在30万字以上，读者对角色关系复杂度的要求也在提高。</p>
+        </li>
+        <li>
+          <div class="news-head"><a href="/#news" class="news-title">广播剧改编来源从小说扩展到同人短篇</a><span class="news-date">2025-03-15</span></div>
+          <p class="news-summary">部分制作组开始尝试将高口碑同人短篇改编为广播剧，单集时长控制在20分钟内，适合通勤场景收听。</p>
+        </li>
+        <li>
+          <div class="news-head"><a href="/#news" class="news-title">悬疑推理类耽美读者关注点转向案件逻辑</a><span class="news-date">2025-03-11</span></div>
+          <p class="news-summary">近期讨论较多的悬疑作品普遍在案件设计上投入更多篇幅，读者评论中“推理扎实”“线索合理”成为高频词。</p>
+        </li>
+        <li>
+          <div class="news-head"><a href="/#news" class="news-title">完结书单需求上升，短篇合集受碎片阅读欢迎</a><span class="news-date">2025-03-06</span></div>
+          <p class="news-summary">不少读者在评论中提到更倾向于选择已完结作品，避免追更等待，5万字以内的短篇合集点击量有所增长。</p>
+        </li>
+        <li>
+          <div class="news-head"><a href="/#news" class="news-title">现代都市治愈系作品更新节奏趋稳</a><span class="news-date">2025-02-28</span></div>
+          <p class="news-summary">都市日常类作品的更新频率多集中在每周两到三次，篇幅以中篇为主，适合通勤和睡前分段阅读。</p>
+        </li>
+        <li>
+          <div class="news-head"><a href="/#news" class="news-title">同人创作平台标签体系逐步细化</a><span class="news-date">2025-02-22</span></div>
+          <p class="news-summary">同人合集类内容的标签从单一题材词扩展到篇幅、情绪走向和角色关系类型，方便读者按具体需求筛选。</p>
+        </li>
+      </ul>
+    </section>
+
+    <!-- 10. 相关推荐 -->
+    <section class="section-block" id="rec">
+      <h2 class="sec-title">相关推荐标签</h2>
+      <p class="sec-sub">按具体内容方向快速跳转，覆盖类型、场景和比较词</p>
+      <div class="rec-tags">
+        <a href="/#hot" class="rec-tag">古风权谋长篇</a>
+        <a href="/#hot" class="rec-tag">都市治愈短篇</a>
+        <a href="/#hot" class="rec-tag">悬疑刑侦强强</a>
+        <a href="/#hot" class="rec-tag">校园暗恋成长</a>
+        <a href="/#hot" class="rec-tag">广播剧完结推荐</a>
+        <a href="/#hot" class="rec-tag">睡前十分钟短篇</a>
+        <a href="/#hot" class="rec-tag">通勤中篇连载</a>
+        <a href="/#hot" class="rec-tag">仙侠年下师徒</a>
+        <a href="/#hot" class="rec-tag">破镜重圆广播剧</a>
+        <a href="/#hot" class="rec-tag">同人科幻合集</a>
+        <a href="/#hot" class="rec-tag">完结长篇书单</a>
+        <a href="/#hot" class="rec-tag">都市合租日常</a>
+      </div>
+    </section>
+
+    <!-- 11. 趋势观察 -->
+    <section class="section-block" id="trend">
+      <h2 class="sec-title">趋势观察</h2>
+      <p class="sec-sub">近期耽美阅读内容消费的几个变化方向</p>
+      <div class="trend-panel">
+        <div class="trend-item">
+          <h5>类型融合增多</h5>
+          <p>古风+悬疑、都市+奇幻的复合标签作品数量上升，读者对单一背景的依赖降低，更看重故事本身的节奏和人物关系。</p>
+        </div>
+        <div class="trend-item">
+          <h5>短篇消费场景明确</h5>
+          <p>睡前和通勤两个场景对应的短篇、中篇需求稳定，读者在筛选时优先看篇幅标签，再判断题材。</p>
+        </div>
+        <div class="trend-item">
+          <h5>广播剧选择看完成度</h5>
+          <p>读者选择广播剧时更关注季数是否完整、番外是否齐全，对连载中的剧目持观望态度。</p>
+        </div>
+        <div class="trend-item">
+          <h5>完结书单参考价值提升</h5>
+          <p>不想追更的读者比例增加，完结书单的点击和收藏行为比连载推荐更集中，篇幅和评分成为主要筛选依据。</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 右栏：辅助阅读 -->
+  <aside class="col-right">
+    <div class="right-card">
+      <h4>页内目录</h4>
+      <ul class="toc-list">
+        <li><a href="/#intro"><span class="num">01</span>平台简介</a></li>
+        <li><a href="/#hot"><span class="num">02</span>热门作品</a></li>
+        <li><a href="/#update"><span class="num">03</span>最新更新</a></li>
+        <li><a href="/#category"><span class="num">04</span>分类入口</a></li>
+        <li><a href="/#deep"><span class="num">05</span>深度解析</a></li>
+        <li><a href="/#guide"><span class="num">06</span>体验指南</a></li>
+        <li><a href="/#faq"><span class="num">07</span>常见问题</a></li>
+        <li><a href="/#comment"><span class="num">08</span>读者评论</a></li>
+        <li><a href="/#news"><span class="num">09</span>相关资讯</a></li>
+        <li><a href="/#rec"><span class="num">10</span>相关推荐</a></li>
+        <li><a href="/#trend"><span class="num">11</span>趋势观察</a></li>
+      </ul>
+    </div>
+    <div class="right-card">
+      <h4>热门条目</h4>
+      <ul>
+        <li><a href="/#hot">《春山渡》古风权谋</a></li>
+        <li><a href="/#hot">《雾港疑云》刑侦强强</a></li>
+        <li><a href="/#hot">《归途列车》广播剧</a></li>
+        <li><a href="/#hot">《深夜便利店》治愈短篇</a></li>
+        <li><a href="/#hot">《折枝记》仙侠年下</a></li>
+      </ul>
+    </div>
+    <div class="right-card">
+      <h4>延伸阅读</h4>
+      <ul>
+        <li><a href="/#deep">耽美题材分类逻辑</a></li>
+        <li><a href="/#deep">短篇与长篇场景匹配</a></li>
+        <li><a href="/#guide">如何筛选完结作品</a></li>
+        <li><a href="/#faq">广播剧与原著对比</a></li>
+        <li><a href="/#trend">近期内容趋势观察</a></li>
+      </ul>
+    </div>
+  </aside>
+
+</div>
+
+<!-- 页尾 -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="logo-text">一耽官网</div>
+      <p>耽美小说、广播剧、漫画与同人创作的内容导航与阅读推荐，按类型、篇幅和更新状态帮助读者找到合适作品。</p>
+    </div>
+    <div class="footer-col">
+      <h5>内容分类</h5>
+      <ul>
+        <li><a href="/#category">古风纯爱</a></li>
+        <li><a href="/#category">现代都市</a></li>
+        <li><a href="/#category">悬疑推理</a></li>
+        <li><a href="/#category">校园青春</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>阅读入口</h5>
+      <ul>
+        <li><a href="/#hot">热门作品</a></li>
+        <li><a href="/#update">最新更新</a></li>
+        <li><a href="/#rec">推荐标签</a></li>
+        <li><a href="/#faq">常见问题</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>关于</h5>
+      <ul>
+        <li><a href="/#intro">平台简介</a></li>
+        <li><a href="/#guide">体验指南</a></li>
+        <li><a href="/#news">相关资讯</a></li>
+        <li><a href="/#trend">趋势观察</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 一耽官网 · 内容导航示例页面</span>
+    <span>部分内容为示例数据，仅用于展示页面结构</span>
+  </div>
+</footer>
+
+<script>
+  (function() {
+    // 搜索筛选：对热门卡片进行本地查找
+    var searchInput = document.getElementById('searchInput');
+    var searchBtn = document.getElementById('searchBtn');
+    var hotGrid = document.getElementById('hotGrid');
+    var hotEmpty = document.getElementById('hotEmpty');
+    var cards = hotGrid ? hotGrid.querySelectorAll('.content-card') : [];
+
+    function filterCards() {
+      var q = searchInput ? searchInput.value.trim().toLowerCase() : '';
+      if (!hotGrid) return;
+      var visible = 0;
+      cards.forEach(function(card) {
+        var text = card.textContent.toLowerCase();
+        var match = !q || text.indexOf(q) !== -1;
+        card.style.display = match ? '' : 'none';
+        if (match) visible++;
+      });
+      if (hotEmpty) {
+        hotEmpty.classList.toggle('show', visible === 0 && q !== '');
+      }
+    }
+
+    if (searchBtn) searchBtn.addEventListener('click', filterCards);
+    if (searchInput) {
+      searchInput.addEventListener('input', filterCards);
+      searchInput.addEventListener('keydown', function(e) {
+        if (e.key === 'Enter') { e.preventDefault(); filterCards(); }
+      });
+    }
+
+    // 左栏导航激活态简单处理
+    var navLinks = document.querySelectorAll('.col-left nav ul li a');
+    navLinks.forEach(function(link) {
+      link.addEventListener('click', function() {
+        navLinks.forEach(function(l) { l.classList.remove('active'); });
+        this.classList.add('active');
+      });
+    });
+  })();
+</script>
+</body>
+                                   </html>
