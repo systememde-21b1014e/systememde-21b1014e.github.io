@@ -1,0 +1,2341 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>每日大赛yandex官网一-赛事入口_参赛指南_人气作品对比</title>
+  <meta name="description" content="每日大赛yandex官网一为参赛者与观众提供赛事入口、每日赛程、人气作品和参赛指南，适合想了解赛制、追踪排名或挑选作品的人。">
+  <meta name="keywords" content="每日大赛赛程,参赛作品推荐,人气排名,赛事入口,参赛指南">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22><rect width=%2232%22 height=%2232%22 rx=%228%22 fill=%22%231b2b4b%22/><path d=%22M9 18l4 4 10-12%22 stroke=%22%23f4c95d%22 stroke-width=%223%22 fill=%22none%22 stroke-linecap=%22round%22/><circle cx=%2216%22 cy=%2216%22 r=%2213%22 stroke=%22%23f4c95d%22 stroke-width=%221.5%22 fill=%22none%22/></svg>">
+  <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+  <style>
+    :root {
+      --brand-navy: #13294b;
+      --brand-navy-deep: #0b1a30;
+      --brand-gold: #d9a825;
+      --brand-gold-soft: #f4e3b2;
+      --brand-teal: #1f7a8c;
+      --bg-page: #f6f4ef;
+      --bg-panel: #ffffff;
+      --bg-soft: #f0ede6;
+      --text-main: #1c2533;
+      --text-secondary: #5b6575;
+      --text-muted: #8a8f99;
+      --border-light: #e3ded4;
+      --border-strong: #cfc8ba;
+      --radius-sm: 6px;
+      --radius-md: 12px;
+      --radius-lg: 18px;
+      --shadow-card: 0 2px 8px rgba(19, 41, 75, 0.06);
+      --shadow-lift: 0 6px 18px rgba(19, 41, 75, 0.10);
+      --font-sans: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans SC", system-ui, sans-serif;
+      --font-display: "PingFang SC", "Microsoft YaHei", "Noto Sans SC", system-ui, sans-serif;
+      --header-height: 64px;
+      --notice-height: 36px;
+      --sticky-offset: calc(var(--notice-height) + var(--header-height) + 14px);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: var(--sticky-offset);
+    }
+
+    body {
+      font-family: var(--font-sans);
+      background: var(--bg-page);
+      color: var(--text-main);
+      line-height: 1.65;
+      font-size: 15px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    ul, ol {
+      list-style: none;
+    }
+
+    img, svg {
+      display: block;
+      max-width: 100%;
+    }
+
+    button {
+      font-family: inherit;
+      cursor: pointer;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1360px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* ===== 吸顶公告条 ===== */
+    .notice-bar {
+      position: sticky;
+      top: 0;
+      z-index: 60;
+      height: var(--notice-height);
+      background: linear-gradient(90deg, var(--brand-navy-deep), var(--brand-navy) 60%, var(--brand-teal));
+      color: #f6f0dc;
+      display: flex;
+      align-items: center;
+      font-size: 13px;
+      letter-spacing: 0.3px;
+      overflow: hidden;
+    }
+
+    .notice-bar .container {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      white-space: nowrap;
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+
+    .notice-bar .container::-webkit-scrollbar {
+      display: none;
+    }
+
+    .notice-tag {
+      display: inline-block;
+      background: var(--brand-gold);
+      color: var(--brand-navy-deep);
+      font-weight: 700;
+      font-size: 11px;
+      padding: 1px 8px;
+      border-radius: 20px;
+      letter-spacing: 0.5px;
+      flex-shrink: 0;
+    }
+
+    .notice-text {
+      opacity: 0.92;
+    }
+
+    .notice-link {
+      margin-left: auto;
+      color: var(--brand-gold-soft);
+      border-bottom: 1px dashed rgba(244, 227, 178, 0.5);
+      flex-shrink: 0;
+      font-size: 12px;
+    }
+
+    /* ===== 吸顶页头 ===== */
+    .site-header {
+      position: sticky;
+      top: var(--notice-height);
+      z-index: 50;
+      height: var(--header-height);
+      background: rgba(255, 255, 255, 0.96);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--border-light);
+      box-shadow: 0 1px 6px rgba(19, 41, 75, 0.04);
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      height: 100%;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-shrink: 0;
+    }
+
+    .brand-mark {
+      width: 36px;
+      height: 36px;
+      flex-shrink: 0;
+    }
+
+    .brand-text {
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: 18px;
+      letter-spacing: -0.3px;
+      color: var(--brand-navy);
+      line-height: 1.2;
+      max-width: 260px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .header-nav {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      flex: 1;
+      min-width: 0;
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+
+    .header-nav::-webkit-scrollbar {
+      display: none;
+    }
+
+    .header-nav a {
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--text-secondary);
+      padding: 7px 12px;
+      border-radius: 20px;
+      white-space: nowrap;
+      transition: background 0.2s, color 0.2s;
+    }
+
+    .header-nav a:hover,
+    .header-nav a:focus-visible {
+      background: var(--bg-soft);
+      color: var(--brand-navy);
+      outline: none;
+    }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-shrink: 0;
+    }
+
+    .search-box {
+      display: flex;
+      align-items: center;
+      background: var(--bg-soft);
+      border: 1px solid transparent;
+      border-radius: 22px;
+      padding: 0 6px 0 14px;
+      height: 36px;
+      transition: border-color 0.2s, background 0.2s;
+    }
+
+    .search-box:focus-within {
+      border-color: var(--brand-gold);
+      background: #fff;
+    }
+
+    .search-box input {
+      border: none;
+      background: transparent;
+      font-size: 13px;
+      color: var(--text-main);
+      width: 130px;
+      outline: none;
+      font-family: inherit;
+    }
+
+    .search-box input::placeholder {
+      color: var(--text-muted);
+    }
+
+    .search-box button {
+      background: var(--brand-navy);
+      color: #fff;
+      border: none;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      font-size: 13px;
+      transition: background 0.2s;
+    }
+
+    .search-box button:hover {
+      background: var(--brand-teal);
+    }
+
+    .search-feedback {
+      font-size: 12px;
+      color: var(--brand-teal);
+      white-space: nowrap;
+      display: none;
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--brand-navy);
+      color: #fff;
+      font-size: 13px;
+      font-weight: 600;
+      padding: 8px 18px;
+      border-radius: 22px;
+      border: none;
+      transition: background 0.2s, transform 0.15s;
+      white-space: nowrap;
+    }
+
+    .btn-primary:hover {
+      background: var(--brand-teal);
+    }
+
+    /* ===== 主题首屏 ===== */
+    .hero {
+      background: linear-gradient(135deg, #0f2138 0%, #13294b 55%, #1d3a5c 100%);
+      color: #f3efe4;
+      padding: 54px 0 48px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      right: -60px;
+      top: -60px;
+      width: 340px;
+      height: 340px;
+      border-radius: 50%;
+      border: 2px solid rgba(217, 168, 37, 0.18);
+      pointer-events: none;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      right: 40px;
+      bottom: -80px;
+      width: 220px;
+      height: 220px;
+      border-radius: 50%;
+      border: 1px solid rgba(217, 168, 37, 0.14);
+      pointer-events: none;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.25fr 0.75fr;
+      gap: 40px;
+      align-items: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(217, 168, 37, 0.16);
+      border: 1px solid rgba(217, 168, 37, 0.4);
+      color: var(--brand-gold-soft);
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.6px;
+      padding: 4px 14px;
+      border-radius: 20px;
+      margin-bottom: 18px;
+    }
+
+    .hero-badge .dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--brand-gold);
+      box-shadow: 0 0 0 3px rgba(217, 168, 37, 0.25);
+    }
+
+    .hero h1 {
+      font-family: var(--font-display);
+      font-size: clamp(28px, 4vw, 46px);
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      line-height: 1.2;
+      margin-bottom: 16px;
+      color: #fbf6ea;
+    }
+
+    .hero-desc {
+      font-size: 15px;
+      line-height: 1.8;
+      color: rgba(243, 239, 228, 0.82);
+      max-width: 540px;
+      margin-bottom: 26px;
+    }
+
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 22px;
+      margin-bottom: 28px;
+      font-size: 13px;
+      color: rgba(243, 239, 228, 0.7);
+    }
+
+    .hero-meta span {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .hero-meta strong {
+      color: var(--brand-gold-soft);
+      font-weight: 700;
+    }
+
+    .hero-cta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .hero-cta .btn-primary {
+      background: var(--brand-gold);
+      color: var(--brand-navy-deep);
+      font-weight: 700;
+      padding: 11px 26px;
+      font-size: 14px;
+    }
+
+    .hero-cta .btn-primary:hover {
+      background: #e8b93a;
+    }
+
+    .hero-cta .btn-ghost {
+      display: inline-flex;
+      align-items: center;
+      background: transparent;
+      color: #f3efe4;
+      border: 1px solid rgba(243, 239, 228, 0.35);
+      padding: 11px 24px;
+      border-radius: 22px;
+      font-size: 14px;
+      font-weight: 500;
+      transition: border-color 0.2s, background 0.2s;
+    }
+
+    .hero-cta .btn-ghost:hover {
+      border-color: var(--brand-gold);
+      background: rgba(217, 168, 37, 0.08);
+    }
+
+    .hero-visual {
+      position: relative;
+      display: flex;
+      justify-content: center;
+    }
+
+    .hero-card {
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      border-radius: var(--radius-lg);
+      padding: 22px 24px;
+      width: 100%;
+      max-width: 320px;
+      backdrop-filter: blur(4px);
+    }
+
+    .hero-card-title {
+      font-size: 12px;
+      letter-spacing: 1px;
+      color: var(--brand-gold-soft);
+      margin-bottom: 14px;
+      font-weight: 600;
+    }
+
+    .hero-rank-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 9px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      font-size: 13px;
+    }
+
+    .hero-rank-item:last-child {
+      border-bottom: none;
+    }
+
+    .hero-rank-num {
+      width: 22px;
+      height: 22px;
+      border-radius: 6px;
+      background: rgba(217, 168, 37, 0.18);
+      color: var(--brand-gold-soft);
+      font-weight: 700;
+      font-size: 12px;
+      display: grid;
+      place-items: center;
+      flex-shrink: 0;
+    }
+
+    .hero-rank-name {
+      flex: 1;
+      min-width: 0;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      color: rgba(243, 239, 228, 0.9);
+    }
+
+    .hero-rank-score {
+      color: var(--brand-gold-soft);
+      font-weight: 600;
+      font-size: 12px;
+    }
+
+    /* ===== 三栏主内容区 ===== */
+    .main-layout {
+      display: grid;
+      grid-template-columns: 180px minmax(0, 1fr) 250px;
+      gap: 28px;
+      padding: 36px 0 50px;
+      align-items: start;
+    }
+
+    /* 左栏 */
+    .sidebar-left {
+      position: sticky;
+      top: var(--sticky-offset);
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    .side-block {
+      background: var(--bg-panel);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-md);
+      padding: 16px 14px;
+      box-shadow: var(--shadow-card);
+    }
+
+    .side-block h3 {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 1.2px;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      margin-bottom: 12px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border-light);
+    }
+
+    .channel-nav {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .channel-nav a {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13.5px;
+      font-weight: 500;
+      color: var(--text-secondary);
+      padding: 7px 9px;
+      border-radius: var(--radius-sm);
+      transition: background 0.18s, color 0.18s;
+      line-height: 1.4;
+    }
+
+    .channel-nav a:hover,
+    .channel-nav a:focus-visible {
+      background: var(--bg-soft);
+      color: var(--brand-navy);
+      outline: none;
+    }
+
+    .channel-nav a .ch-icon {
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: var(--brand-gold);
+      flex-shrink: 0;
+    }
+
+    .tag-cloud {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .tag-cloud a {
+      font-size: 12px;
+      padding: 3px 9px;
+      background: var(--bg-soft);
+      border-radius: 14px;
+      color: var(--text-secondary);
+      transition: background 0.18s, color 0.18s;
+    }
+
+    .tag-cloud a:hover {
+      background: var(--brand-gold-soft);
+      color: var(--brand-navy);
+    }
+
+    /* 中栏 */
+    .content-main {
+      min-width: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+
+    .section {
+      background: var(--bg-panel);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-lg);
+      padding: 26px 28px;
+      box-shadow: var(--shadow-card);
+    }
+
+    .section-header {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 14px;
+      margin-bottom: 18px;
+      flex-wrap: wrap;
+    }
+
+    .section-title {
+      font-family: var(--font-display);
+      font-size: 19px;
+      font-weight: 800;
+      color: var(--brand-navy);
+      letter-spacing: -0.2px;
+      position: relative;
+      padding-left: 14px;
+    }
+
+    .section-title::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 4px;
+      height: 18px;
+      border-radius: 2px;
+      background: linear-gradient(180deg, var(--brand-gold), var(--brand-teal));
+    }
+
+    .section-sub {
+      font-size: 12.5px;
+      color: var(--text-muted);
+    }
+
+    /* 简介 */
+    .intro-text p {
+      font-size: 14.5px;
+      color: var(--text-secondary);
+      line-height: 1.85;
+      margin-bottom: 12px;
+    }
+
+    .intro-text p:last-child {
+      margin-bottom: 0;
+    }
+
+    .intro-highlight {
+      background: linear-gradient(90deg, var(--brand-gold-soft) 0%, transparent 100%);
+      padding: 1px 4px;
+      border-radius: 3px;
+      color: var(--brand-navy);
+      font-weight: 600;
+    }
+
+    /* 热门卡片 */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+    }
+
+    .content-card {
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-md);
+      padding: 14px 16px;
+      background: #fcfbf8;
+      transition: box-shadow 0.2s, transform 0.18s, border-color 0.2s;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .content-card:hover {
+      box-shadow: var(--shadow-lift);
+      transform: translateY(-2px);
+      border-color: var(--border-strong);
+    }
+
+    .card-top {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .card-type {
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--brand-teal);
+      background: rgba(31, 122, 140, 0.1);
+      padding: 1px 8px;
+      border-radius: 10px;
+    }
+
+    .card-title {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--brand-navy);
+      line-height: 1.4;
+    }
+
+    .card-desc {
+      font-size: 13px;
+      color: var(--text-secondary);
+      line-height: 1.6;
+      flex: 1;
+    }
+
+    .card-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+    }
+
+    .card-tags span {
+      font-size: 11px;
+      color: var(--text-muted);
+      background: var(--bg-soft);
+      padding: 1px 7px;
+      border-radius: 8px;
+    }
+
+    .card-meta {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 11.5px;
+      color: var(--text-muted);
+      padding-top: 6px;
+      border-top: 1px dashed var(--border-light);
+    }
+
+    .card-meta .heat {
+      color: var(--brand-gold);
+      font-weight: 700;
+    }
+
+    /* 最新更新列表 */
+    .update-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .update-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      padding: 11px 0;
+      border-bottom: 1px solid var(--border-light);
+    }
+
+    .update-item:last-child {
+      border-bottom: none;
+    }
+
+    .update-date {
+      font-size: 12px;
+      color: var(--text-muted);
+      font-variant-numeric: tabular-nums;
+      flex-shrink: 0;
+      width: 48px;
+      padding-top: 2px;
+    }
+
+    .update-body {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .update-name {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text-main);
+      margin-bottom: 2px;
+    }
+
+    .update-name a:hover {
+      color: var(--brand-teal);
+    }
+
+    .update-summary {
+      font-size: 12.5px;
+      color: var(--text-secondary);
+      line-height: 1.55;
+      display: -webkit-box;
+      -webkit-line-clamp: 1;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    /* 分类入口 */
+    .category-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+    }
+
+    .category-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 16px 8px;
+      border-radius: var(--radius-md);
+      background: var(--bg-soft);
+      border: 1px solid transparent;
+      transition: background 0.18s, border-color 0.18s, transform 0.18s;
+      gap: 6px;
+    }
+
+    .category-item:hover {
+      background: #fff;
+      border-color: var(--brand-gold);
+      transform: translateY(-2px);
+    }
+
+    .category-icon {
+      width: 30px;
+      height: 30px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background: rgba(217, 168, 37, 0.16);
+      color: var(--brand-navy);
+      font-weight: 800;
+      font-size: 13px;
+    }
+
+    .category-name {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--brand-navy);
+    }
+
+    .category-count {
+      font-size: 11px;
+      color: var(--text-muted);
+    }
+
+    /* 深度解析 */
+    .deep-dive h3 {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--brand-navy);
+      margin: 20px 0 8px;
+      padding-left: 10px;
+      border-left: 3px solid var(--brand-gold);
+    }
+
+    .deep-dive h3:first-of-type {
+      margin-top: 0;
+    }
+
+    .deep-dive p {
+      font-size: 14px;
+      color: var(--text-secondary);
+      line-height: 1.82;
+      margin-bottom: 10px;
+    }
+
+    .deep-dive ul {
+      margin: 6px 0 14px 2px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .deep-dive ul li {
+      font-size: 13.5px;
+      color: var(--text-secondary);
+      line-height: 1.7;
+      padding-left: 18px;
+      position: relative;
+    }
+
+    .deep-dive ul li::before {
+      content: "◆";
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: var(--brand-gold);
+      font-size: 9px;
+    }
+
+    .compare-panel {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin: 14px 0;
+    }
+
+    .compare-col {
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-md);
+      padding: 14px 16px;
+      background: #fcfbf8;
+    }
+
+    .compare-col h4 {
+      font-size: 13.5px;
+      font-weight: 700;
+      margin-bottom: 8px;
+      color: var(--brand-navy);
+    }
+
+    .compare-col p {
+      font-size: 12.5px;
+      line-height: 1.65;
+      margin-bottom: 0;
+    }
+
+    /* 体验指南 */
+    .guide-steps {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      counter-reset: guide;
+    }
+
+    .guide-step {
+      display: flex;
+      gap: 14px;
+      padding: 12px 0;
+      border-bottom: 1px dashed var(--border-light);
+      counter-increment: guide;
+    }
+
+    .guide-step:last-child {
+      border-bottom: none;
+    }
+
+    .guide-num {
+      width: 26px;
+      height: 26px;
+      flex-shrink: 0;
+      border-radius: 50%;
+      background: var(--brand-navy);
+      color: var(--brand-gold-soft);
+      font-weight: 700;
+      font-size: 12px;
+      display: grid;
+      place-items: center;
+    }
+
+    .guide-content h4 {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--text-main);
+      margin-bottom: 3px;
+    }
+
+    .guide-content p {
+      font-size: 13px;
+      color: var(--text-secondary);
+      line-height: 1.65;
+      margin: 0;
+    }
+
+    /* FAQ */
+    .faq-list {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .faq-item {
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      background: #fcfbf8;
+    }
+
+    .faq-item summary {
+      padding: 12px 16px;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text-main);
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      transition: background 0.18s;
+    }
+
+    .faq-item summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .faq-item summary::before {
+      content: "?";
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: var(--brand-gold-soft);
+      color: var(--brand-navy);
+      font-size: 12px;
+      font-weight: 800;
+      display: grid;
+      place-items: center;
+      flex-shrink: 0;
+    }
+
+    .faq-item summary:hover {
+      background: var(--bg-soft);
+    }
+
+    .faq-item[open] summary {
+      background: var(--bg-soft);
+      border-bottom: 1px solid var(--border-light);
+    }
+
+    .faq-answer {
+      padding: 12px 16px 14px 46px;
+      font-size: 13.5px;
+      color: var(--text-secondary);
+      line-height: 1.75;
+    }
+
+    /* 评论 */
+    .comment-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+
+    .comment-card {
+      background: #fcfbf8;
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-md);
+      padding: 12px 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .comment-head {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .avatar {
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      font-size: 11px;
+      font-weight: 700;
+      flex-shrink: 0;
+      color: #fff;
+    }
+
+    .comment-name {
+      font-size: 12.5px;
+      font-weight: 600;
+      color: var(--text-main);
+    }
+
+    .comment-time {
+      font-size: 10.5px;
+      color: var(--text-muted);
+      margin-left: auto;
+    }
+
+    .comment-text {
+      font-size: 12.5px;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+
+    /* 资讯 */
+    .news-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .news-item {
+      display: flex;
+      gap: 14px;
+      padding: 13px 0;
+      border-bottom: 1px solid var(--border-light);
+      align-items: flex-start;
+    }
+
+    .news-item:last-child {
+      border-bottom: none;
+    }
+
+    .news-date {
+      font-size: 12px;
+      color: var(--text-muted);
+      flex-shrink: 0;
+      width: 76px;
+      font-variant-numeric: tabular-nums;
+      padding-top: 2px;
+    }
+
+    .news-body {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .news-title {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text-main);
+      margin-bottom: 2px;
+    }
+
+    .news-title a:hover {
+      color: var(--brand-teal);
+    }
+
+    .news-summary {
+      font-size: 12.5px;
+      color: var(--text-secondary);
+      line-height: 1.55;
+    }
+
+    /* 相关推荐 */
+    .related-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .related-tags a {
+      font-size: 13px;
+      padding: 6px 14px;
+      border-radius: 20px;
+      background: var(--bg-soft);
+      border: 1px solid var(--border-light);
+      color: var(--text-secondary);
+      transition: background 0.18s, color 0.18s, border-color 0.18s;
+    }
+
+    .related-tags a:hover {
+      background: var(--brand-navy);
+      color: #fff;
+      border-color: var(--brand-navy);
+    }
+
+    /* 右栏 */
+    .sidebar-right {
+      position: sticky;
+      top: var(--sticky-offset);
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    .toc-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1px;
+    }
+
+    .toc-list a {
+      font-size: 12.5px;
+      color: var(--text-secondary);
+      padding: 5px 8px;
+      border-radius: var(--radius-sm);
+      transition: background 0.18s, color 0.18s;
+      display: block;
+      line-height: 1.4;
+      border-left: 2px solid transparent;
+    }
+
+    .toc-list a:hover {
+      background: var(--bg-soft);
+      color: var(--brand-navy);
+      border-left-color: var(--brand-gold);
+    }
+
+    .hot-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .hot-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      padding: 8px 0;
+      border-bottom: 1px dashed var(--border-light);
+      font-size: 12.5px;
+    }
+
+    .hot-item:last-child {
+      border-bottom: none;
+    }
+
+    .hot-num {
+      width: 18px;
+      height: 18px;
+      border-radius: 4px;
+      background: var(--bg-soft);
+      color: var(--text-muted);
+      font-size: 10.5px;
+      font-weight: 700;
+      display: grid;
+      place-items: center;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    .hot-item:nth-child(1) .hot-num {
+      background: var(--brand-gold);
+      color: var(--brand-navy-deep);
+    }
+
+    .hot-item:nth-child(2) .hot-num {
+      background: var(--brand-gold-soft);
+      color: var(--brand-navy);
+    }
+
+    .hot-item:nth-child(3) .hot-num {
+      background: var(--brand-gold-soft);
+      color: var(--brand-navy);
+    }
+
+    .hot-name {
+      flex: 1;
+      min-width: 0;
+      color: var(--text-main);
+      line-height: 1.45;
+    }
+
+    .hot-name a:hover {
+      color: var(--brand-teal);
+    }
+
+    .hot-score {
+      color: var(--brand-gold);
+      font-weight: 700;
+      font-size: 11.5px;
+      flex-shrink: 0;
+    }
+
+    /* 页尾 */
+    .site-footer {
+      background: var(--brand-navy-deep);
+      color: rgba(243, 239, 228, 0.7);
+      padding: 40px 0 24px;
+      font-size: 13px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr 1fr;
+      gap: 32px;
+      margin-bottom: 28px;
+    }
+
+    .footer-brand .brand-text {
+      color: #fbf6ea;
+      font-size: 17px;
+      margin-bottom: 10px;
+    }
+
+    .footer-brand p {
+      font-size: 12.5px;
+      line-height: 1.7;
+      max-width: 280px;
+      color: rgba(243, 239, 228, 0.6);
+    }
+
+    .footer-col h4 {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 1.2px;
+      color: var(--brand-gold-soft);
+      margin-bottom: 12px;
+      text-transform: uppercase;
+    }
+
+    .footer-col ul {
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+    }
+
+    .footer-col a {
+      font-size: 12.5px;
+      color: rgba(243, 239, 228, 0.65);
+      transition: color 0.18s;
+    }
+
+    .footer-col a:hover {
+      color: var(--brand-gold-soft);
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      padding-top: 18px;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px;
+      font-size: 11.5px;
+      color: rgba(243, 239, 228, 0.45);
+    }
+
+    /* 响应式 */
+    @media (max-width: 1100px) {
+      .main-layout {
+        grid-template-columns: 160px minmax(0, 1fr);
+      }
+      .sidebar-right {
+        display: none;
+      }
+      .card-grid {
+        grid-template-columns: 1fr;
+      }
+      .category-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 820px) {
+      .main-layout {
+        grid-template-columns: 1fr;
+        gap: 22px;
+      }
+      .sidebar-left {
+        position: static;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 14px;
+      }
+      .sidebar-left .side-block:first-child {
+        grid-column: 1 / -1;
+      }
+      .channel-nav {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 4px;
+      }
+      .channel-nav a {
+        font-size: 12.5px;
+        padding: 5px 10px;
+        background: var(--bg-soft);
+      }
+      .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 28px;
+      }
+      .hero-visual {
+        justify-content: flex-start;
+      }
+      .hero-card {
+        max-width: 100%;
+      }
+      .comment-grid {
+        grid-template-columns: 1fr;
+      }
+      .compare-panel {
+        grid-template-columns: 1fr;
+      }
+      .section {
+        padding: 20px 18px;
+      }
+      .header-actions .btn-primary {
+        display: none;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .container {
+        padding: 0 14px;
+      }
+      .sidebar-left {
+        grid-template-columns: 1fr;
+      }
+      .category-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+      .header-nav {
+        display: none;
+      }
+      .search-box input {
+        width: 90px;
+      }
+      .brand-text {
+        font-size: 15px;
+        max-width: 170px;
+      }
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 22px;
+      }
+      .hero {
+        padding: 36px 0 32px;
+      }
+      .section-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 吸顶公告条 -->
+  <div class="notice-bar" id="notice-bar">
+    <div class="container">
+      <span class="notice-tag">上新</span>
+      <span class="notice-text">第 28 届每日大赛本周主题「城市切片」开放投稿，截止至本周日 22:00</span>
+      <a href="/#latest-update" class="notice-link">查看今日更新 →</a>
+    </div>
+  </div>
+
+  <!-- 吸顶页头 -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/#top" class="brand" aria-label="每日大赛yandex官网一 首页">
+        <svg class="brand-mark" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect width="36" height="36" rx="9" fill="#13294b"/>
+          <circle cx="18" cy="18" r="12" stroke="#d9a825" stroke-width="1.6" fill="none"/>
+          <path d="M12 20l4 4 9-11" stroke="#f4e3b2" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          <circle cx="26" cy="10" r="2.2" fill="#d9a825"/>
+        </svg>
+        <span class="brand-text">每日大赛yandex官网一</span>
+      </a>
+
+      <nav class="header-nav" aria-label="主题导航">
+        <a href="/#intro">赛事简介</a>
+        <a href="/#hot-picks">人气作品</a>
+        <a href="/#latest-update">今日更新</a>
+        <a href="/#categories">分类入口</a>
+        <a href="/#deep-dive">赛制解析</a>
+        <a href="/#guide">参赛指南</a>
+        <a href="/#faq">常见问题</a>
+        <a href="/#news">赛事资讯</a>
+      </nav>
+
+      <div class="header-actions">
+        <div class="search-box" role="search">
+          <input type="search" id="site-search" placeholder="搜索作品/赛程" aria-label="搜索站内内容">
+          <button type="button" id="search-btn" aria-label="搜索">⌕</button>
+        </div>
+        <span class="search-feedback" id="search-feedback" role="status"></span>
+        <a href="/#hot-picks" class="btn-primary">热门作品</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- 主题首屏 -->
+  <section class="hero" id="top">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <div class="hero-badge"><span class="dot"></span> 第 28 届 · 城市切片主题赛</div>
+        <h1>每日大赛yandex官网一</h1>
+        <p class="hero-desc">
+          汇集每日大赛的赛程入口、人气作品与参赛指南。从今日更新到分类排行榜，帮助参赛者快速找到投稿方向，也让观众便捷挑选值得一看的创意短片与视觉作品。
+        </p>
+        <div class="hero-meta">
+          <span>📅 日更节奏 <strong>每日 18:00</strong></span>
+          <span>🏆 本期投稿 <strong>1,286</strong> 件</span>
+          <span>👀 今日围观 <strong>2.4 万</strong></span>
+        </div>
+        <div class="hero-cta">
+          <a href="/#latest-update" class="btn-primary">查看今日更新</a>
+          <a href="/#guide" class="btn-ghost">参赛指南</a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-card" aria-label="今日人气作品速览">
+          <div class="hero-card-title">今日人气作品 TOP5</div>
+          <div class="hero-rank-item">
+            <span class="hero-rank-num">1</span>
+            <span class="hero-rank-name">《凌晨四点的早餐铺》</span>
+            <span class="hero-rank-score">9.8</span>
+          </div>
+          <div class="hero-rank-item">
+            <span class="hero-rank-num">2</span>
+            <span class="hero-rank-name">《地铁末班车的独白》</span>
+            <span class="hero-rank-score">9.6</span>
+          </div>
+          <div class="hero-rank-item">
+            <span class="hero-rank-num">3</span>
+            <span class="hero-rank-name">《天台上的城市农场》</span>
+            <span class="hero-rank-score">9.4</span>
+          </div>
+          <div class="hero-rank-item">
+            <span class="hero-rank-num">4</span>
+            <span class="hero-rank-name">《旧书店的最后一页》</span>
+            <span class="hero-rank-score">9.2</span>
+          </div>
+          <div class="hero-rank-item">
+            <span class="hero-rank-num">5</span>
+            <span class="hero-rank-name">《巷口理发师的镜头》</span>
+            <span class="hero-rank-score">9.0</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 三栏主内容区 -->
+  <div class="container main-layout">
+
+    <!-- 左栏：频道导航 + 标签索引 -->
+    <aside class="sidebar-left" aria-label="频道与标签">
+      <div class="side-block">
+        <h3>频道导航</h3>
+        <nav class="channel-nav" aria-label="栏目索引">
+          <a href="/#intro"><span class="ch-icon"></span>赛事简介</a>
+          <a href="/#hot-picks"><span class="ch-icon"></span>人气作品推荐</a>
+          <a href="/#latest-update"><span class="ch-icon"></span>今日更新</a>
+          <a href="/#categories"><span class="ch-icon"></span>分类入口</a>
+          <a href="/#deep-dive"><span class="ch-icon"></span>赛制深度解析</a>
+          <a href="/#guide"><span class="ch-icon"></span>参赛体验指南</a>
+          <a href="/#faq"><span class="ch-icon"></span>常见问题</a>
+          <a href="/#comments"><span class="ch-icon"></span>参赛者评论</a>
+          <a href="/#news"><span class="ch-icon"></span>赛事资讯</a>
+          <a href="/#related"><span class="ch-icon"></span>相关推荐</a>
+        </nav>
+      </div>
+      <div class="side-block">
+        <h3>热门标签</h3>
+        <div class="tag-cloud">
+          <a href="/#hot-picks">城市切片</a>
+          <a href="/#latest-update">日更短片</a>
+          <a href="/#categories">纪实摄影</a>
+          <a href="/#deep-dive">一分钟叙事</a>
+          <a href="/#faq">参赛流程</a>
+          <a href="/#guide">手机拍摄</a>
+          <a href="/#news">主题预告</a>
+          <a href="/#related">人气排名</a>
+        </div>
+      </div>
+    </aside>
+
+    <!-- 中栏：主内容 -->
+    <main class="content-main" id="main-content">
+
+      <!-- 1. 内容简介 -->
+      <section class="section" id="intro">
+        <div class="section-header">
+          <h2 class="section-title">赛事简介与内容定位</h2>
+          <span class="section-sub">了解每日大赛的内容方向</span>
+        </div>
+        <div class="intro-text">
+          <p>
+            <span class="intro-highlight">每日大赛yandex官网一</span>是一个围绕每日创意赛事构建的内容门户，为参赛者和观众提供清晰的赛程入口、作品展示与参赛指引。页面聚焦“每日一题”的轻量创作节奏，覆盖城市纪实、生活切片、一分钟叙事等方向，适合喜欢用镜头捕捉日常、想参与短周期比赛的创作者，也适合想快速筛选优质作品的观众。
+          </p>
+          <p>
+            与常规影像赛事不同，每日大赛更强调“当天拍、当天投、当天看”的即时反馈。参赛者可以围绕当天公布的主题词完成作品，观众则通过人气作品推荐和今日更新列表追踪最新动态。页面中的分类入口按纪实摄影、城市短片、手机创作等类型划分，方便按方向查找内容；深度解析与参赛指南则为初次接触的用户提供赛制拆解与实操建议。
+          </p>
+          <p>
+            如果你是第一次接触这个赛事，建议从“今日更新”和“人气作品”两个板块开始浏览，先感受整体风格与评判偏好；如果已有明确参赛意向，可直接前往“参赛指南”了解投稿规则与常见问题。页面同时保留赛事资讯与参赛者评论，帮助你在创作之外了解社区讨论与主题趋势。
+          </p>
+        </div>
+      </section>
+
+      <!-- 2. 热门内容推荐 -->
+      <section class="section" id="hot-picks">
+        <div class="section-header">
+          <h2 class="section-title">人气作品推荐</h2>
+          <span class="section-sub">观众评分与讨论热度综合展示</span>
+        </div>
+        <div class="card-grid">
+          <article class="content-card">
+            <div class="card-top">
+              <span class="card-type">城市短片</span>
+            </div>
+            <h3 class="card-title">《凌晨四点的早餐铺》</h3>
+            <p class="card-desc">用 90 秒记录早餐铺开灯到第一笼包子出笼的过程，旁白克制，画面充满烟火气。</p>
+            <div class="card-tags">
+              <span>城市切片</span><span>纪实短片</span><span>晨间光影</span>
+            </div>
+            <div class="card-meta">
+              <span>评分 <span class="heat">9.8</span></span>
+              <span>今日围观 3,421</span>
+            </div>
+          </article>
+          <article class="content-card">
+            <div class="card-top">
+              <span class="card-type">手机创作</span>
+            </div>
+            <h3 class="card-title">《地铁末班车的独白》</h3>
+            <p class="card-desc">全程手机拍摄，以第一人称视角呈现末班车厢里不同乘客的微表情与城市夜色。</p>
+            <div class="card-tags">
+              <span>通勤场景</span><span>手机拍摄</span><span>夜景叙事</span>
+            </div>
+            <div class="card-meta">
+              <span>评分 <span class="heat">9.6</span></span>
+              <span>今日围观 2,876</span>
+            </div>
+          </article>
+          <article class="content-card">
+            <div class="card-top">
+              <span class="card-type">纪实摄影</span>
+            </div>
+            <h3 class="card-title">《天台上的城市农场》</h3>
+            <p class="card-desc">一组 12 张的图片故事，记录社区志愿者在楼顶种菜、分菜与邻里交换的日常。</p>
+            <div class="card-tags">
+              <span>社区纪实</span><span>图片故事</span><span>绿色空间</span>
+            </div>
+            <div class="card-meta">
+              <span>评分 <span class="heat">9.4</span></span>
+              <span>今日围观 2,103</span>
+            </div>
+          </article>
+          <article class="content-card">
+            <div class="card-top">
+              <span class="card-type">一分钟叙事</span>
+            </div>
+            <h3 class="card-title">《旧书店的最后一页》</h3>
+            <p class="card-desc">店主整理旧书时发现一封夹在书中的手写信，短片用一镜到底完成情绪递进。</p>
+            <div class="card-tags">
+              <span>书店故事</span><span>一镜到底</span><span>怀旧氛围</span>
+            </div>
+            <div class="card-meta">
+              <span>评分 <span class="heat">9.2</span></span>
+              <span>今日围观 1,865</span>
+            </div>
+          </article>
+          <article class="content-card">
+            <div class="card-top">
+              <span class="card-type">城市短片</span>
+            </div>
+            <h3 class="card-title">《巷口理发师的镜头》</h3>
+            <p class="card-desc">理发师用手机记录自己每天接待的最后一位客人，时间跨度三个月，剪辑利落。</p>
+            <div class="card-tags">
+              <span>职业纪实</span><span>手机创作</span><span>街巷日常</span>
+            </div>
+            <div class="card-meta">
+              <span>评分 <span class="heat">9.0</span></span>
+              <span>今日围观 1,542</span>
+            </div>
+          </article>
+          <article class="content-card">
+            <div class="card-top">
+              <span class="card-type">纪实摄影</span>
+            </div>
+            <h3 class="card-title">《菜市场里的颜色》</h3>
+            <p class="card-desc">以色彩为线索重组菜市场摊位，红椒、绿菜、蓝围裙构成一组高饱和度城市切片。</p>
+            <div class="card-tags">
+              <span>色彩叙事</span><span>菜市场</span><span>城市切片</span>
+            </div>
+            <div class="card-meta">
+              <span>评分 <span class="heat">8.9</span></span>
+              <span>今日围观 1,320</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- 3. 最新更新 -->
+      <section class="section" id="latest-update">
+        <div class="section-header">
+          <h2 class="section-title">今日更新与热门动态</h2>
+          <span class="section-sub">每日 18:00 前后更新</span>
+        </div>
+        <div class="update-list">
+          <div class="update-item">
+            <span class="update-date">今日</span>
+            <div class="update-body">
+              <div class="update-name"><a href="/#latest-update">《雨棚下的修鞋摊》上线</a></div>
+              <div class="update-summary">老街修鞋摊的一天，镜头贴近手部特写，适合喜欢细节纪实的观众。</div>
+            </div>
+          </div>
+          <div class="update-item">
+            <span class="update-date">今日</span>
+            <div class="update-body">
+              <div class="update-name"><a href="/#latest-update">《公交站台的第七分钟》发布</a></div>
+              <div class="update-summary">固定机位记录站台候车人群，剪辑节奏与到站广播形成呼应。</div>
+            </div>
+          </div>
+          <div class="update-item">
+            <span class="update-date">今日</span>
+            <div class="update-body">
+              <div class="update-name"><a href="/#latest-update">《便利店夜班手记》更新第 3 集</a></div>
+              <div class="update-summary">手机拍摄的夜班日常，本期聚焦凌晨进店的代驾司机与外卖骑手。</div>
+            </div>
+          </div>
+          <div class="update-item">
+            <span class="update-date">今日</span>
+            <div class="update-body">
+              <div class="update-name"><a href="/#latest-update">《阳台上的晾衣绳》摄影组图</a></div>
+              <div class="update-summary">十二张逆光晾晒场景，记录不同家庭在阳台留下的生活痕迹。</div>
+            </div>
+          </div>
+          <div class="update-item">
+            <span class="update-date">昨日</span>
+            <div class="update-body">
+              <div class="update-name"><a href="/#latest-update">《快递驿站的午后》上线</a></div>
+              <div class="update-summary">用三分钟呈现驿站最忙碌的时段，人物对话与环境音保留完整。</div>
+            </div>
+          </div>
+          <div class="update-item">
+            <span class="update-date">昨日</span>
+            <div class="update-body">
+              <div class="update-name"><a href="/#latest-update">《天桥上的风筝》短片发布</a></div>
+              <div class="update-summary">老人每天在天桥放风筝，短片以风筝线为视觉线索串联城市天际线。</div>
+            </div>
+          </div>
+          <div class="update-item">
+            <span class="update-date">昨日</span>
+            <div class="update-body">
+              <div class="update-name"><a href="/#latest-update">《社区食堂的午餐时间》更新</a></div>
+              <div class="update-summary">排队打饭的镜头与后厨备菜交叉剪辑，呈现社区食堂的日常节奏。</div>
+            </div>
+          </div>
+          <div class="update-item">
+            <span class="update-date">昨日</span>
+            <div class="update-body">
+              <div class="update-name"><a href="/#latest-update">《街角花店的一小时》组图</a></div>
+              <div class="update-summary">花店开门前的准备与第一波顾客，图片克制，色彩自然。</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4. 分类入口 -->
+      <section class="section" id="categories">
+        <div class="section-header">
+          <h2 class="section-title">分类入口</h2>
+          <span class="section-sub">按创作类型与场景查找</span>
+        </div>
+        <div class="category-grid">
+          <a href="/#hot-picks" class="category-item">
+            <span class="category-icon">城</span>
+            <span class="category-name">城市短片</span>
+            <span class="category-count">426 件作品</span>
+          </a>
+          <a href="/#hot-picks" class="category-item">
+            <span class="category-icon">纪</span>
+            <span class="category-name">纪实摄影</span>
+            <span class="category-count">318 组</span>
+          </a>
+          <a href="/#hot-picks" class="category-item">
+            <span class="category-icon">手</span>
+            <span class="category-name">手机创作</span>
+            <span class="category-count">205 件</span>
+          </a>
+          <a href="/#hot-picks" class="category-item">
+            <span class="category-icon">一</span>
+            <span class="category-name">一分钟叙事</span>
+            <span class="category-count">167 件</span>
+          </a>
+          <a href="/#hot-picks" class="category-item">
+            <span class="category-icon">夜</span>
+            <span class="category-name">夜景与灯光</span>
+            <span class="category-count">98 件</span>
+          </a>
+          <a href="/#hot-picks" class="category-item">
+            <span class="category-icon">职</span>
+            <span class="category-name">职业纪实</span>
+            <span class="category-count">76 件</span>
+          </a>
+          <a href="/#hot-picks" class="category-item">
+            <span class="category-icon">社</span>
+            <span class="category-name">社区日常</span>
+            <span class="category-count">142 件</span>
+          </a>
+          <a href="/#hot-picks" class="category-item">
+            <span class="category-icon">色</span>
+            <span class="category-name">色彩叙事</span>
+            <span class="category-count">54 组</span>
+          </a>
+        </div>
+      </section>
+
+      <!-- 5. 深度解析正文 -->
+      <section class="section deep-dive" id="deep-dive">
+        <div class="section-header">
+          <h2 class="section-title">赛制深度解析：如何理解每日大赛的评判与节奏</h2>
+          <span class="section-sub">面向参赛者与深度观众的规则拆解</span>
+        </div>
+        <h3>每日大赛的赛制框架</h3>
+        <p>
+          每日大赛yandex官网一的核心机制围绕“每日主题”展开。每个比赛日会公布一个主题词，参赛者需在当天 22:00 前提交一件与主题相关的原创作品。作品形式可以是 30 秒至 3 分钟的短片，也可以是 6 至 12 张的组图，提交后进入当日展示池，由观众评分与编辑推荐共同决定人气排序。
+        </p>
+        <p>
+          这种短周期赛制对创作者的响应速度有较高要求，但也降低了参与门槛。不需要前期组队或长期筹备，只需围绕当天主题完成一次完整的观察与表达。对于习惯通勤拍摄或手机随拍的用户，每日大赛提供了一个稳定的输出节奏。
+        </p>
+        <h3>主题类型与创作方向</h3>
+        <p>
+          从近期主题来看，每日大赛更偏向城市生活与日常观察类命题，大致可分为以下几类：
+        </p>
+        <ul>
+          <li><strong>空间切片类：</strong>如“早餐铺”“天桥”“公交站台”，要求创作者在特定空间内完成观察与提炼。</li>
+          <li><strong>人物状态类：</strong>如“夜班”“候车”“收摊”，侧重捕捉人物在特定时间段的自然状态。</li>
+          <li><strong>色彩与物件类：</strong>如“红色”“旧物”“招牌”，以单一元素为线索组织画面。</li>
+          <li><strong>互动关系类：</strong>如“交换”“等待”“告别”，强调人与人之间的微小互动。</li>
+        </ul>
+        <p>
+          理解主题类型有助于快速确定拍摄方向。例如遇到“空间切片类”命题时，优先考虑固定机位与长镜头；遇到“人物状态类”命题时，则更适合跟随拍摄与短访谈。
+        </p>
+        <h3>人气作品与编辑推荐的区别</h3>
+        <div class="compare-panel">
+          <div class="compare-col">
+            <h4>人气作品</h4>
+            <p>依据观众评分与围观量综合排序，反映即时传播热度。适合想了解大众口味的观众，也适合参赛者观察什么样的切入点更容易引发共鸣。</p>
+          </div>
+          <div class="compare-col">
+            <h4>编辑推荐</h4>
+            <p>由赛事编辑从当日投稿中挑选，侧重叙事完整度与画面完成度。数量较少，适合想研究作品结构、剪辑节奏与主题深度的用户。</p>
+          </div>
+        </div>
+        <p>
+          两者并不冲突，人气作品偏重传播效果，编辑推荐偏重创作质量。浏览时可以交替查看，既了解大众偏好，也参考专业判断。对于参赛者来说，人气作品的高分区往往能在“主题贴合度”和“情绪触发点”上提供直接参考。
+        </p>
+        <h3>参赛作品的常见结构</h3>
+        <p>
+          从近期高分作品来看，大多数作品遵循“快速进入场景—呈现一个具体细节—留出情绪出口”的三段式结构。短片类作品通常在前 10 秒内建立环境，中段集中呈现一个动作或对话，结尾避免过多解释，用画面或环境音收束。
+        </p>
+        <p>
+          组图类作品则更依赖图片之间的节奏关系。常见做法是第一张交代空间，中间几张聚焦人物或细节，最后一张回到空间或留下开放感。无论短片还是组图，每日大赛的评委更看重“是否在有限时间内完成一次清晰的表达”，而非制作规模。
+        </p>
+      </section>
+
+      <!-- 6. 体验指南 -->
+      <section class="section" id="guide">
+        <div class="section-header">
+          <h2 class="section-title">参赛与浏览体验指南</h2>
+          <span class="section-sub">从浏览到投稿的实用路径</span>
+        </div>
+        <div class="guide-steps">
+          <div class="guide-step">
+            <span class="guide-num">1</span>
+            <div class="guide-content">
+              <h4>先看今日更新，感受当日主题</h4>
+              <p>首页的“今日更新”列表会集中展示当天新上线的作品，适合快速了解当前主题的常见切入角度与整体风格。</p>
+            </div>
+          </div>
+          <div class="guide-step">
+            <span class="guide-num">2</span>
+            <div class="guide-content">
+              <h4>用分类入口定位感兴趣的方向</h4>
+              <p>如果对城市短片或纪实摄影更感兴趣，可通过分类入口直接筛选对应类型，避免在大量作品中反复翻找。</p>
+            </div>
+          </div>
+          <div class="guide-step">
+            <span class="guide-num">3</span>
+            <div class="guide-content">
+              <h4>参考人气作品的高分要素</h4>
+              <p>人气作品卡片中会标注类型、标签与评分，可以重点关注高评分作品的开场方式与结尾处理，作为自己的拍摄参考。</p>
+            </div>
+          </div>
+          <div class="guide-step">
+            <span class="guide-num">4</span>
+            <div class="guide-content">
+              <h4>准备投稿前先读常见问题</h4>
+              <p>FAQ 部分整理了投稿时间、作品格式与主题契合度等常见疑问，提前阅读可以减少提交环节的反复修改。</p>
+            </div>
+          </div>
+          <div class="guide-step">
+            <span class="guide-num">5</span>
+            <div class="guide-content">
+              <h4>通过资讯与评论了解主题趋势</h4>
+              <p>赛事资讯会预告主题方向，参赛者评论则提供实际拍摄中的经验与反馈，适合在创作前快速浏览。</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 7. FAQ -->
+      <section class="section" id="faq">
+        <div class="section-header">
+          <h2 class="section-title">常见问题</h2>
+          <span class="section-sub">参赛者最常问到的六个问题</span>
+        </div>
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary>每日大赛yandex官网一适合什么样的人参加？</summary>
+            <div class="faq-answer">适合喜欢城市观察、日常记录与短周期创作的摄影或短片爱好者。不需要专业设备，手机拍摄也可以投稿，重点在于主题贴合度与表达完整度。</div>
+          </details>
+          <details class="faq-item">
+            <summary>每天的作品一般多久更新一次？</summary>
+            <div class="faq-answer">每日 18:00 前后会集中更新当日投稿作品与主题信息，热门动态和人气排序也会在晚间持续刷新，次日早上会显示前一日的人气结果。</div>
+          </details>
+          <details class="faq-item">
+            <summary>参赛作品有类型限制吗？手机拍摄能不能投？</summary>
+            <div class="faq-answer">作品类型以城市短片、纪实摄影、手机创作和一分钟叙事为主，手机拍摄完全接受。组图建议 6 至 12 张，短片建议 30 秒至 3 分钟，具体以当日主题说明为准。</div>
+          </details>
+          <details class="faq-item">
+            <summary>在哪能看到往期主题和人气作品？</summary>
+            <div class="faq-answer">页面中的分类入口与相关推荐标签可以回溯往期常见主题方向，人气作品卡片也会保留近期高评分条目，方便参考往期风格。</div>
+          </details>
+          <details class="faq-item">
+            <summary>每日大赛和普通摄影比赛比有什么区别？</summary>
+            <div class="faq-answer">主要区别在节奏和参与方式。每日大赛以当天主题、当天投稿、当天展示为核心，反馈周期短，适合轻量创作；普通摄影比赛通常周期更长，准备成本更高。</div>
+          </details>
+          <details class="faq-item">
+            <summary>投稿后多久能看到自己的作品展示？</summary>
+            <div class="faq-answer">作品提交后一般会在当日展示池中显示，热门排序和评分会在晚间逐步更新。如果遇到高峰期，展示时间可能略有延迟，建议避开截稿前最后一小时提交。</div>
+          </details>
+        </div>
+      </section>
+
+      <!-- 8. 用户评论 -->
+      <section class="section" id="comments">
+        <div class="section-header">
+          <h2 class="section-title">参赛者与观众评论</h2>
+          <span class="section-sub">来自社区的真实语气片段（示例数据）</span>
+        </div>
+        <div class="comment-grid">
+          <div class="comment-card">
+            <div class="comment-head">
+              <span class="avatar" style="background:#1f7a8c;">林</span>
+              <span class="comment-name">林间有风</span>
+              <span class="comment-time">2 小时前</span>
+            </div>
+            <p class="comment-text">今天的主题“雨棚下”挺有意思，看了几组作品都在拍修鞋摊，切入点各不相同。</p>
+          </div>
+          <div class="comment-card">
+            <div class="comment-head">
+              <span class="avatar" style="background:#b35c2e;">陈</span>
+              <span class="comment-name">陈小满</span>
+              <span class="comment-time">3 小时前</span>
+            </div>
+            <p class="comment-text">手机拍摄那组末班车真的很有代入感，剪辑不花哨但节奏很稳。</p>
+          </div>
+          <div class="comment-card">
+            <div class="comment-head">
+              <span class="avatar" style="background:#6b4e8c;">张</span>
+              <span class="comment-name">张野</span>
+              <span class="comment-time">4 小时前</span>
+            </div>
+            <p class="comment-text">第一次参加，投稿流程比想象中简单，就是主题契合度还得再琢磨。</p>
+          </div>
+          <div class="comment-card">
+            <div class="comment-head">
+              <span class="avatar" style="background:#2e6b4f;">周</span>
+              <span class="comment-name">周与安</span>
+              <span class="comment-time">5 小时前</span>
+            </div>
+            <p class="comment-text">编辑推荐那几组确实更耐看，人气榜有时候偏热闹，两边对照着看比较好。</p>
+          </div>
+          <div class="comment-card">
+            <div class="comment-head">
+              <span class="avatar" style="background:#8c4a4a;">苏</span>
+              <span class="comment-name">苏打水</span>
+              <span class="comment-time">6 小时前</span>
+            </div>
+            <p class="comment-text">希望主题预告能再提前半天，通勤党有时候赶不及当天拍。</p>
+          </div>
+          <div class="comment-card">
+            <div class="comment-head">
+              <span class="avatar" style="background:#4a5e8c;">何</span>
+              <span class="comment-name">何一舟</span>
+              <span class="comment-time">7 小时前</span>
+            </div>
+            <p class="comment-text">《天台上的城市农场》组图很舒服，色彩不抢，叙事线也清楚。</p>
+          </div>
+          <div class="comment-card">
+            <div class="comment-head">
+              <span class="avatar" style="background:#7a5c2e;">郑</span>
+              <span class="comment-name">郑南</span>
+              <span class="comment-time">8 小时前</span>
+            </div>
+            <p class="comment-text">看多了发现高分作品开头都很直接，不绕弯子，这点值得学。</p>
+          </div>
+          <div class="comment-card">
+            <div class="comment-head">
+              <span class="avatar" style="background:#3e6b6b;">许</span>
+              <span class="comment-name">许青禾</span>
+              <span class="comment-time">9 小时前</span>
+            </div>
+            <p class="comment-text">组图类竞争好像比短片小一点，但要在十几张里把节奏排好也不容易。</p>
+          </div>
+          <div class="comment-card">
+            <div class="comment-head">
+              <span class="avatar" style="background:#5c4a7a;">吴</span>
+              <span class="comment-name">吴声</span>
+              <span class="comment-time">10 小时前</span>
+            </div>
+            <p class="comment-text">从第一期看到现在，主题质量挺稳定，城市类命题尤其多。</p>
+          </div>
+          <div class="comment-card">
+            <div class="comment-head">
+              <span class="avatar" style="background:#8c6b3e;">顾</span>
+              <span class="comment-name">顾言</span>
+              <span class="comment-time">11 小时前</span>
+            </div>
+            <p class="comment-text">建议新手先投组图，容错率比短片高，剪辑时间也更好控制。</p>
+          </div>
+          <div class="comment-card">
+            <div class="comment-head">
+              <span class="avatar" style="background:#4a6b3e;">沈</span>
+              <span class="comment-name">沈知远</span>
+              <span class="comment-time">12 小时前</span>
+            </div>
+            <p class="comment-text">今天的围观量比昨天高不少，感觉周末主题更容易出好作品。</p>
+          </div>
+          <div class="comment-card">
+            <div class="comment-head">
+              <span class="avatar" style="background:#7a3e5c;">黄</span>
+              <span class="comment-name">黄小楼</span>
+              <span class="comment-time">13 小时前</span>
+            </div>
+            <p class="comment-text">中规中矩的一届，没有特别惊艳的，但整体完成度都不错。</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 9. 相关资讯 -->
+      <section class="section" id="news">
+        <div class="section-header">
+          <h2 class="section-title">赛事资讯与主题预告</h2>
+          <span class="section-sub">近期动态与方向参考</span>
+        </div>
+        <div class="news-list">
+          <div class="news-item">
+            <span class="news-date">2026-02-10</span>
+            <div class="news-body">
+              <div class="news-title"><a href="/#news">下期主题预告：城市里的“声音地标”</a></div>
+              <p class="news-summary">赛事组公布下一期主题方向，鼓励创作者用环境音与画面结合的方式记录城市声音地标。</p>
+            </div>
+          </div>
+          <div class="news-item">
+            <span class="news-date">2026-02-08</span>
+            <div class="news-body">
+              <div class="news-title"><a href="/#news">手机创作赛道新增“通勤观察”标签</a></div>
+              <p class="news-summary">为方便通勤场景作品归类，手机创作类新增“通勤观察”标签，投稿时可自行选择。</p>
+            </div>
+          </div>
+          <div class="news-item">
+            <span class="news-date">2026-02-05</span>
+            <div class="news-body">
+              <div class="news-title"><a href="/#news">第 27 届人气作品回顾：纪实类占比提升</a></div>
+              <p class="news-summary">上一届人气前二十中纪实类作品占比明显提升，社区讨论集中在“细节密度”与“结尾处理”。</p>
+            </div>
+          </div>
+          <div class="news-item">
+            <span class="news-date">2026-02-02</span>
+            <div class="news-body">
+              <div class="news-title"><a href="/#news">投稿时间调整：截稿统一为 22:00</a></div>
+              <p class="news-summary">自本周起，所有赛道的截稿时间统一为每日 22:00，展示池更新时间保持不变。</p>
+            </div>
+          </div>
+          <div class="news-item">
+            <span class="news-date">2026-01-28</span>
+            <div class="news-body">
+              <div class="news-title"><a href="/#news">编辑推荐新增“结构清晰”维度</a></div>
+              <p class="news-summary">评审维度微调，编辑推荐更关注作品结构完整度，尤其是开头十秒的信息建立。</p>
+            </div>
+          </div>
+          <div class="news-item">
+            <span class="news-date">2026-01-22</span>
+            <div class="news-body">
+              <div class="news-title"><a href="/#news">组图投稿上限调整至 12 张</a></div>
+              <p class="news-summary">组图类作品投稿上限由 9 张调整为 12 张，鼓励更完整的图片叙事节奏。</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 10. 相关推荐 -->
+      <section class="section" id="related">
+        <div class="section-header">
+          <h2 class="section-title">相关推荐与延伸方向</h2>
+          <span class="section-sub">按具体内容方向继续浏览</span>
+        </div>
+        <div class="related-tags">
+          <a href="/#hot-picks">城市纪实短片</a>
+          <a href="/#hot-picks">手机通勤拍摄</a>
+          <a href="/#hot-picks">一分钟叙事技巧</a>
+          <a href="/#hot-picks">社区日常摄影</a>
+          <a href="/#hot-picks">夜景与灯光作品</a>
+          <a href="/#hot-picks">职业人物纪录</a>
+          <a href="/#hot-picks">色彩叙事组图</a>
+          <a href="/#hot-picks">菜市场观察</a>
+        </div>
+      </section>
+
+      <!-- 11. 精选内容 / 创作者证言 -->
+      <section class="section" id="selected">
+        <div class="section-header">
+          <h2 class="section-title">精选内容与创作者证言</h2>
+          <span class="section-sub">来自参赛者的创作反馈</span>
+        </div>
+        <div class="comment-grid">
+          <div class="comment-card" style="background:var(--bg-soft);border-color:var(--border-strong);">
+            <p class="comment-text" style="font-size:13.5px;line-height:1.75;color:var(--text-main);">“每日大赛让我养成了每天观察一个具体场景的习惯。以前总觉得要拍大事，现在发现早餐铺的蒸汽、修鞋摊的工具摆放，本身就是完整的叙事。”<br><span style="display:block;margin-top:8px;font-size:12px;color:var(--text-muted);">—— 参赛者 林间有风 · 连续参与 17 天</span></p>
+          </div>
+          <div class="comment-card" style="background:var(--bg-soft);border-color:var(--border-strong);">
+            <p class="comment-text" style="font-size:13.5px;line-height:1.75;color:var(--text-main);">“组图投稿让我重新理解了节奏。不是每张图都要精彩，而是让十二张图一起讲一件事。这个赛制逼着我做减法。”<br><span style="display:block;margin-top:8px;font-size:12px;color:var(--text-muted);">—— 参赛者 陈小满 · 三次编辑推荐</span></p>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- 右栏：目录 + 热门条目 + 延伸阅读 -->
+    <aside class="sidebar-right" aria-label="页内目录与热门条目">
+      <div class="side-block">
+        <h3>页内目录</h3>
+        <nav class="toc-list" aria-label="页内目录">
+          <a href="/#intro">赛事简介</a>
+          <a href="/#hot-picks">人气作品推荐</a>
+          <a href="/#latest-update">今日更新</a>
+          <a href="/#categories">分类入口</a>
+          <a href="/#deep-dive">赛制深度解析</a>
+          <a href="/#guide">参赛体验指南</a>
+          <a href="/#faq">常见问题</a>
+          <a href="/#comments">参赛者评论</a>
+          <a href="/#news">赛事资讯</a>
+          <a href="/#related">相关推荐</a>
+        </nav>
+      </div>
+      <div class="side-block">
+        <h3>热门条目</h3>
+        <div class="hot-list">
+          <div class="hot-item">
+            <span class="hot-num">1</span>
+            <span class="hot-name"><a href="/#hot-picks">凌晨四点的早餐铺</a></span>
+            <span class="hot-score">9.8</span>
+          </div>
+          <div class="hot-item">
+            <span class="hot-num">2</span>
+            <span class="hot-name"><a href="/#hot-picks">地铁末班车的独白</a></span>
+            <span class="hot-score">9.6</span>
+          </div>
+          <div class="hot-item">
+            <span class="hot-num">3</span>
+            <span class="hot-name"><a href="/#hot-picks">天台上的城市农场</a></span>
+            <span class="hot-score">9.4</span>
+          </div>
+          <div class="hot-item">
+            <span class="hot-num">4</span>
+            <span class="hot-name"><a href="/#hot-picks">旧书店的最后一页</a></span>
+            <span class="hot-score">9.2</span>
+          </div>
+          <div class="hot-item">
+            <span class="hot-num">5</span>
+            <span class="hot-name"><a href="/#hot-picks">巷口理发师的镜头</a></span>
+            <span class="hot-score">9.0</span>
+          </div>
+          <div class="hot-item">
+            <span class="hot-num">6</span>
+            <span class="hot-name"><a href="/#hot-picks">菜市场里的颜色</a></span>
+            <span class="hot-score">8.9</span>
+          </div>
+        </div>
+      </div>
+      <div class="side-block">
+        <h3>延伸阅读</h3>
+        <div class="toc-list">
+          <a href="/#deep-dive">每日大赛的赛制框架</a>
+          <a href="/#deep-dive">主题类型与创作方向</a>
+          <a href="/#deep-dive">人气作品与编辑推荐的区别</a>
+          <a href="/#guide">从浏览到投稿的步骤</a>
+          <a href="/#faq">手机拍摄能不能投</a>
+        </div>
+      </div>
+    </aside>
+
+  </div>
+
+  <!-- 页尾 -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="brand-text">每日大赛yandex官网一</div>
+          <p>围绕每日创意赛事构建的内容门户，提供赛程入口、人气作品与参赛指南。所有作品与数据仅用于展示页面结构。</p>
+        </div>
+        <div class="footer-col">
+          <h4>赛事内容</h4>
+          <ul>
+            <li><a href="/#hot-picks">人气作品推荐</a></li>
+            <li><a href="/#latest-update">今日更新</a></li>
+            <li><a href="/#categories">分类入口</a></li>
+            <li><a href="/#deep-dive">赛制深度解析</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>参赛帮助</h4>
+          <ul>
+            <li><a href="/#guide">参赛体验指南</a></li>
+            <li><a href="/#faq">常见问题</a></li>
+            <li><a href="/#comments">参赛者评论</a></li>
+            <li><a href="/#news">赛事资讯</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>社区与延伸</h4>
+          <ul>
+            <li><a href="/#related">相关推荐</a></li>
+            <li><a href="/#selected">创作者证言</a></li>
+            <li><a href="/#intro">赛事简介</a></li>
+            <li><a href="/#top">返回顶部</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 每日大赛yandex官网一 · 内容示例页面</span>
+        <span>部分内容为示例数据，仅用于展示页面结构</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function() {
+      "use strict";
+
+      // 搜索功能：本地查找并高亮可见内容
+      var searchInput = document.getElementById('site-search');
+      var searchBtn = document.getElementById('search-btn');
+      var feedback = document.getElementById('search-feedback');
+      var mainContent = document.getElementById('main-content');
+      var searchableSelector = '.card-title, .update-name a, .news-title a, .category-name, .tag-cloud a, .related-tags a, .hot-name a, .faq-item summary, .comment-name';
+      var originalNodes = [];
+
+      // 收集可搜索节点并保存原始文本
+      function collectSearchable() {
+        originalNodes = [];
+        document.querySelectorAll(searchableSelector).forEach(function(el) {
+          if (el.children.length === 0 || el.tagName === 'A') {
+            originalNodes.push({ el: el, text: el.textContent.trim() });
+          }
+        });
+      }
+
+      // 移除所有高亮
+      function clearHighlights() {
+        document.querySelectorAll('mark.search-highlight').forEach(function(mark) {
+          var parent = mark.parentNode;
+          while (mark.firstChild) {
+            parent.insertBefore(mark.firstChild, mark);
+          }
+          parent.removeChild(mark);
+          parent.normalize();
+        });
+      }
+
+      // 高亮匹配文本
+      function highlightText(el, keyword) {
+        if (!keyword || !el) return;
+        var text = el.textContent;
+        var lowerText = text.toLowerCase();
+        var lowerKeyword = keyword.toLowerCase();
+        var index = lowerText.indexOf(lowerKeyword);
+        if (index === -1) return;
+
+        // 避免重复包裹
+        if (el.querySelector('mark.search-highlight')) return;
+
+        var before = text.slice(0, index);
+        var match = text.slice(index, index + keyword.length);
+        var after = text.slice(index + keyword.length);
+
+        var mark = document.createElement('mark');
+        mark.className = 'search-highlight';
+        mark.style.background = '#f4e3b2';
+        mark.style.color = '#13294b';
+        mark.style.padding = '0 2px';
+        mark.style.borderRadius = '2px';
+        mark.textContent = match;
+
+        el.textContent = '';
+        if (before) el.appendChild(document.createTextNode(before));
+        el.appendChild(mark);
+        if (after) el.appendChild(document.createTextNode(after));
+      }
+
+      // 执行搜索
+      function performSearch() {
+        var keyword = searchInput.value.trim();
+        clearHighlights();
+
+        if (!keyword) {
+          feedback.style.display = 'none';
+          feedback.textContent = '';
+          return;
+        }
+
+        var matchedCount = 0;
+        originalNodes.forEach(function(item) {
+          var text = item.el.textContent.toLowerCase();
+          if (text.indexOf(keyword.toLowerCase()) !== -1) {
+            matchedCount++;
+            highlightText(item.el, keyword);
+          }
+        });
+
+        if (matchedCount > 0) {
+          feedback.style.display = 'inline-block';
+          feedback.textContent = '找到 ' + matchedCount + ' 处相关内容';
+          // 滚动到第一个匹配项
+          var firstMark = document.querySelector('mark.search-highlight');
+          if (firstMark) {
+            var section = firstMark.closest('.section');
+            if (section) {
+              section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+          }
+        } else {
+          feedback.style.display = 'inline-block';
+          feedback.textContent = '未找到相关内容，请尝试其他关键词';
+        }
+      }
+
+      // 初始化
+      collectSearchable();
+
+      searchBtn.addEventListener('click', performSearch);
+      searchInput.addEventListener('keydown', function(e) {
+        if (e.key === 'Enter') {
+          e.preventDefault();
+          performSearch();
+        }
+      });
+
+      // 输入清空时清除高亮
+      searchInput.addEventListener('input', function() {
+        if (!searchInput.value.trim()) {
+          clearHighlights();
+          feedback.style.display = 'none';
+          feedback.textContent = '';
+        }
+      });
+
+      // 点击页面其他区域时不意外清空，保持高亮
+
+      // 锚点平滑滚动已有 scroll-padding-top 支持
+
+    })();
+  </script>
+
+</body>
+  </html>
